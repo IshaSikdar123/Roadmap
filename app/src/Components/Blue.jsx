@@ -111,6 +111,7 @@
 import React, { useState } from 'react';
 import earth from '../assets/earth.png'; 
 import ring from '../assets/ring.png';
+import pipe from '../assets/pipe.svg';
 import road from '../assets/road.svg'; 
 import btn from '../assets/btn.svg';
 import icon from '../assets/icon.png';
@@ -130,6 +131,12 @@ function Blue() {
     <ChakraProvider>
       <div className="relative w-full h-[110vh] sm:h-[180vh]">
         <img src={earth} alt="Earth" className="w-full h-full object-cover" />
+        <img 
+  src={pipe} 
+  alt="Pipe" 
+  className='absolute  w-[150vw] h-[250vh] z-[50] top-[21vw] left-0 opacity-100 visible'
+  style={{ clipPath: 'inset(0 0 46.5% 0)' }} 
+/>
 
         {/* Glowing Ball */}
         <div className="absolute top-[30vw] sm:top-[14vw] left-[25vw] sm:left-[22vw] w-[4vw] h-[4vw] rounded-full bg-[#08d2f6]"
@@ -147,7 +154,7 @@ function Blue() {
 
         {/* Road Button */}
         <button 
-          className="absolute w-[60vw] sm:w-[30vw] top-[7vw] sm:top-[4vw] -left-[3vw] sm:left-[9vw] focus:outline-none transform hover:scale-105 transition-transform duration-300"
+          className="absolute w-[60vw] sm:w-[30vw] top-[7vw] sm:top-[4vw] -left-[3vw] sm:left-[9vw] z-[50] focus:outline-none transform hover:scale-105 transition-transform duration-300"
         >
           <img src={road} alt="Road" className="w-full filter brightness-100" />
         </button>
