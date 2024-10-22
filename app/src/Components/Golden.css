@@ -1,0 +1,27 @@
+@keyframes wave {
+    0% {
+      transform: translateX(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateX(-2px) rotate(2deg);
+    }
+    50% {
+      transform: translateX(-4px) rotate(0deg);
+    }
+    75% {
+      transform: translateX(-2px) rotate(-2deg);
+    }
+    100% {
+      transform: translateX(0px) rotate(0deg);
+    }
+  }
+  
+  .flag {
+    transform-origin: left center;
+    animation: wave 1.5s ease-in-out infinite;
+  }
+  
+  .flagpole {
+    position: relative;
+  }
+  
