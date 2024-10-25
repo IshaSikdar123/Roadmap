@@ -5,20 +5,100 @@ import pipe2 from '../assets/pipe2.svg';
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box } from '@chakra-ui/react';
 
 function Purple() {
-  // Define difficulty and buttonLink as per your logic
-  const difficulty = 'basics'; // Example of difficulty level, could be 'basics', 'medium', or 'hard'
-  const buttonLink = 'https://example.com'; // Example button link
+  // State for tracking active content
+  const [activeContent, setActiveContent] = useState({
+    boxTitle: "EXCEL",
+    difficulty: 'basics',
+    buttonLink: 'https://example.com',
+    contentDescription: "This course includes"
+  });
 
-  const [boxContent, setBoxContent] = useState("Click an SVG element");
+  // Define content for each circle
+  const circleContent = {
+    circle1: {
+      boxTitle: "EXCEL BASICS",
+      difficulty: 'basics',
+      links: [
+        "https://www.wikipedia.org/",
+        "https://www.khanacademy.org/",
+        "https://www.britannica.com/",
+        "https://www.howstuffworks.com/",
+        "https://www.sparknotes.com/"
+      ],
+      description: "Learn Excel fundamentals and basic operations"
+    },
+    circle2: {
+      boxTitle: "EXCEL INTERMEDIATE",
+      difficulty: 'medium',
+      links: [
+        "https://www.github.com/",
+        "https://www.freecodecamp.org/",
+        "https://www.hackerrank.com/",
+        "https://www.coursera.org/",
+        "https://www.udemy.com/"
+      ],
+      description: "Explore advanced Excel features and formulas"
+    },
+    circle3: {
+      boxTitle: "EXCEL ADVANCED",
+      difficulty: 'hard',
+      links: [
+        "https://www.leetcode.com/",
+        "https://www.topcoder.com/",
+        "https://www.codewars.com/",
+        "https://projecteuler.net/",
+        "https://www.codeforces.com/"
+      ],
+      description: "Master complex Excel functions and macros"
+    },
+    circle4: {
+      boxTitle: "EXCEL QUIZ",
+      difficulty: 'quiz',
+      links: [
+        "https://www.quizlet.com/",
+        "https://www.sporcle.com/",
+        "https://www.kahoot.com/",
+        "https://www.trivia.com/",
+        "https://www.funtrivia.com/"
+      ],
+      description: "Test your Excel knowledge"
+    },
+    circle5: {
+      boxTitle: "EXCEL RESOURCES",
+      difficulty: 'resources',
+      links: [
+        "https://www.stackoverflow.com/",
+        "https://www.medium.com/",
+        "https://www.codecademy.com/",
+        "https://www.reddit.com/r/learnprogramming/",
+        "https://developer.mozilla.org/"
+      ],
+      description: "Additional Excel learning resources"
+    }
+  };
 
   // Click handlers for SVG elements
-  const handleClick1 = () => setBoxContent("Clicked on Circle 1");
-  const handleClick2 = () => setBoxContent("Clicked on Circle 2");
-  const handleClick3 = () => setBoxContent("Clicked on Circle 3");
-  const handleClick4 = () => setBoxContent("Clicked on Circle 4");
-  const handleClick5 = () => setBoxContent("Clicked on Circle 5");
-
-  
+  const handleClick1 = () => setActiveContent({
+    ...circleContent.circle1,
+    buttonLink: circleContent.circle1.links[0]
+  });
+  const handleClick2 = () => setActiveContent({
+    ...circleContent.circle2,
+    buttonLink: circleContent.circle2.links[0]
+  });
+  const handleClick3 = () => setActiveContent({
+    ...circleContent.circle3,
+    buttonLink: circleContent.circle3.links[0]
+  });
+  const handleClick4 = () => setActiveContent({
+    ...circleContent.circle4,
+    buttonLink: circleContent.circle4.links[0]
+  });
+  const handleClick5 = () => setActiveContent({
+    ...circleContent.circle5,
+    buttonLink: circleContent.circle5.links[0]
+  });
+   
   return (
     <div className='relative max-w-screen-2xl h-[110vh] sm:h-[180vh]'>
       <div className='w-full h-full'>
@@ -40,8 +120,9 @@ function Purple() {
       </button>
 
       {/*pipe */}
-      <div className="absolute -top-[0.1vw] left-[3.8vw]">
-      <svg width="1250" height="1253" viewBox="0 0 427 371" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div className="absolute -top-[0.1vw] left-[17vw]">
+      <svg width="1250" height="1253" viewBox="0 0 427 371" fill="none" xmlns="http://www.w3.org/2000/svg"
+      style={{ clipPath: 'inset(18% 0 0 0)' }} >
 <g filter="url(#filter0_i_902_656)">
 <path d="M98.9989 -713C98.9989 -693.231 637.32 -486.523 259 -560C-294.5 -667.5 259.501 -481 322.001 -386C360.51 -327.465 -62.8067 -209.064 63.2377 -191.5C195.995 -173 629.291 -357.231 106.999 9.00024C-18.5005 97.0002 19.001 154 250.001 207.5C446.014 252.897 425.001 404.572 307.999 451C-539.999 787.5 952.499 460.5 94.4984 818.5C-75.3 889.348 586.001 1036 323.501 1027C133.021 1020.47 -108.999 972.5 301.501 1216C584.501 1342 -338.5 1285 236.501 1420.5C811.502 1556 -379 1587 220.501 1744C820.002 1901 -435.499 1812 281.001 2047.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
 </g>
@@ -247,24 +328,23 @@ function Purple() {
 </svg>
       </div>
 
-
-      <Box position="absolute" top="5" left="5" bg="white" p={4} boxShadow="lg">
-          {boxContent}
-        </Box>
-
-
       <div className="absolute w-[45vw] sm:w-[40vw] h-[35vh] sm:h-[60vh] top-[6vw] sm:top-[2vw] left-[54vw] sm:left-[46vw] rounded-lg shadow-lg overflow-hidden"
         style={{
-          background: 'linear-gradient(200deg, #34ACAE 0%, #164748 100%)',
+          background: 'linear-gradient(200deg #FDB9FB 100%)',
           opacity: '0.8',
           backdropFilter: 'blur(15px)',
-          backgroundColor: 'rgba(255, 255, 255, 0.1)',
-          border: '1px solid rgba(255, 255, 255, 0.18)',
+          backgroundColor: 'rgba(153, 117, 153, 0.3)',
+          border: '1.5px solid rgba(153, 117, 153, 1)',
         }}>
-        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-5">EXCEL</h1>
+        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-5">{activeContent.boxTitle}</h1>
 
-        <div className="sm:w-[85%] h-[75%] m-[1vw] bg-black bg-opacity-20 rounded-md p-[1vw] overflow-y-auto">
-          <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">This Course includes</h2>
+        <div className="sm:w-[85%] h-[75%] m-[1vw] bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
+        style={{
+          background: 'linear-gradient(180deg #FFD3FF 50% , #FF6AFF 50%)',
+          backdropFilter: 'blur(15px)',
+          backgroundColor: 'rgba(153, 117, 153, 0.8)',
+        }}>
+          <h2 className= " text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">{activeContent.contentDescription}</h2>
 
           <Accordion allowToggle>
             {Array.from({ length: 10 }).map((_, index) => (
@@ -275,23 +355,17 @@ function Purple() {
                 <h3>
                   <AccordionButton className="p-[0.5vw] bg-gray-800 rounded-t-lg">
                     <Box flex="1" textAlign="left" className="font-medium text-white text-[2.5vw] sm:text-[1vw]">
-                      Level-{index + 1} {difficulty}
+                      Level-{index + 1} {activeContent.difficulty}
                     </Box>
                     <AccordionIcon color="white" />
                   </AccordionButton>
                 </h3>
                 <AccordionPanel className="p-[0.5vw] text-white text-[1vw] sm:text-[1vw] z-[50]">
-                  {difficulty === 'basics' ? (
-                    `This is the basic level content for Level ${index + 1}.`
-                  ) : difficulty === 'medium' ? (
-                    `This is the medium level content for Level ${index + 1}.`
-                  ) : (
-                    `This is the hard level content for Level ${index + 1}.`
-                  )}
+                {`This is the ${activeContent.difficulty} level content for Level ${index + 1}.`}
                 </AccordionPanel>
 
                 <a 
-                  href={buttonLink} 
+                  href={activeContent.buttonLink} 
                   target="_blank" // Opens in a new tab
                   rel="noopener noreferrer" // Prevents security vulnerabilities
                   className="hidden sm:block absolute w-[2vw] sm:w-[5.5vw] left-[20vw] sm:left-[26vw] -top-[1.1vw] sm:-top-[1.1vw] mt-[1vw] mr-[1vw] bg-black z-40 text-white p-[0.5vw] rounded-lg hover:bg-[#1f978b] transition"
@@ -303,6 +377,26 @@ function Purple() {
           </Accordion>
         </div>
       </div>
+
+      <div className='absolute bottom-0 sm:-bottom-[1.5vw] left-0 sm:left-[57vw] '>
+<div className="w-92 h-96 relative">
+      {/* Base stand */}
+     
+      
+      {/* Flag pole */}
+      <div className="absolute left-14 top-[14vw] w-2 h-32 bg-gray-400" />
+      
+      {/* Triangular flag */}
+      <div className="absolute left-16 top-[13.6vw]">
+        <svg width="100" height="60" viewBox="0 0 120 60">
+          <path 
+            d="M 0,0 L 120,30 L 0,60 Z" 
+            fill="rgba(112, 56, 186,1)" 
+          />
+        </svg>
+      </div>
+    </div>
+</div>
     </div>
   )
 }

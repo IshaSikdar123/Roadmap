@@ -7,18 +7,99 @@ import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIco
 function White() {
 
 
-  const difficulty = 'basics'; // Example of difficulty level, could be 'basics', 'medium', or 'hard'
-  const buttonLink = 'https://example.com'; // Example button link
+  // State for tracking active content
+  const [activeContent, setActiveContent] = useState({
+    boxTitle: "EXCEL",
+    difficulty: 'basics',
+    buttonLink: 'https://example.com',
+    contentDescription: "Click a circle to view content"
+  });
 
-  const [boxContent, setBoxContent] = useState("Click an SVG element");
- 
-   
-   const handleClick1 = () => setBoxContent("Clicked on Circle 1");
-   const handleClick2 = () => setBoxContent("Clicked on Circle 2");
-   const handleClick3 = () => setBoxContent("Clicked on Circle 3");
-   const handleClick4 = () => setBoxContent("Clicked on Circle 4");
-   const handleClick5 = () => setBoxContent("Clicked on Circle 5");
+  // Define content for each circle
+  const circleContent = {
+    circle1: {
+      boxTitle: "EXCEL BASICS",
+      difficulty: 'basics',
+      links: [
+        "https://www.wikipedia.org/",
+        "https://www.khanacademy.org/",
+        "https://www.britannica.com/",
+        "https://www.howstuffworks.com/",
+        "https://www.sparknotes.com/"
+      ],
+      description: "Learn Excel fundamentals and basic operations"
+    },
+    circle2: {
+      boxTitle: "EXCEL INTERMEDIATE",
+      difficulty: 'medium',
+      links: [
+        "https://www.github.com/",
+        "https://www.freecodecamp.org/",
+        "https://www.hackerrank.com/",
+        "https://www.coursera.org/",
+        "https://www.udemy.com/"
+      ],
+      description: "Explore advanced Excel features and formulas"
+    },
+    circle3: {
+      boxTitle: "EXCEL ADVANCED",
+      difficulty: 'hard',
+      links: [
+        "https://www.leetcode.com/",
+        "https://www.topcoder.com/",
+        "https://www.codewars.com/",
+        "https://projecteuler.net/",
+        "https://www.codeforces.com/"
+      ],
+      description: "Master complex Excel functions and macros"
+    },
+    circle4: {
+      boxTitle: "EXCEL QUIZ",
+      difficulty: 'quiz',
+      links: [
+        "https://www.quizlet.com/",
+        "https://www.sporcle.com/",
+        "https://www.kahoot.com/",
+        "https://www.trivia.com/",
+        "https://www.funtrivia.com/"
+      ],
+      description: "Test your Excel knowledge"
+    },
+    circle5: {
+      boxTitle: "EXCEL RESOURCES",
+      difficulty: 'resources',
+      links: [
+        "https://www.stackoverflow.com/",
+        "https://www.medium.com/",
+        "https://www.codecademy.com/",
+        "https://www.reddit.com/r/learnprogramming/",
+        "https://developer.mozilla.org/"
+      ],
+      description: "Additional Excel learning resources"
+    }
+  };
 
+  // Click handlers for SVG elements
+  const handleClick1 = () => setActiveContent({
+    ...circleContent.circle1,
+    buttonLink: circleContent.circle1.links[0]
+  });
+  const handleClick2 = () => setActiveContent({
+    ...circleContent.circle2,
+    buttonLink: circleContent.circle2.links[0]
+  });
+  const handleClick3 = () => setActiveContent({
+    ...circleContent.circle3,
+    buttonLink: circleContent.circle3.links[0]
+  });
+  const handleClick4 = () => setActiveContent({
+    ...circleContent.circle4,
+    buttonLink: circleContent.circle4.links[0]
+  });
+  const handleClick5 = () => setActiveContent({
+    ...circleContent.circle5,
+    buttonLink: circleContent.circle5.links[0]
+  });
   return (
     <div className='relative max-w-screen-2xl h-[110vh] sm:h-[180vh]'>
      <div className='w-full h-full'>
@@ -43,7 +124,7 @@ function White() {
 
         <div className='absolute -top-[0.1vw] -left-[8.5vw]'>
         <svg width="1300" height="1253" viewBox="0 0 423 377" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_928_532)">
+<g clip-path="url(#clip0_928_532)"> 
 <g filter="url(#filter0_i_928_532)">
 <path d="M98.9989 -1488C98.9989 -1468.23 637.32 -1261.52 259 -1335C-294.5 -1442.5 259.501 -1256 322.001 -1161C360.51 -1102.47 -62.8067 -984.064 63.2377 -966.5C195.995 -948 629.291 -1132.23 106.999 -766C-18.5005 -678 19.001 -621 250.001 -567.5C446.014 -522.103 425.001 -370.428 307.999 -324C-539.999 12.5002 952.499 -314.5 94.4984 43.5002C-75.3 114.348 586.001 261 323.501 252C133.021 245.469 -108.999 197.5 301.501 441C584.501 567 -338.5 510 236.501 645.5C811.502 781 -379 812 220.501 969C820.002 1126 -435.499 1037 281.001 1272.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
 </g>
@@ -252,9 +333,7 @@ function White() {
         
         </div>
 
-        <Box position="absolute" top="5" left="5" bg="white" p={4} boxShadow="lg">
-          {boxContent}
-        </Box>
+        
 
 
         <div className="absolute w-[45vw] sm:w-[40vw] h-[35vh] sm:h-[60vh] top-[6vw] sm:top-[2vw] left-[54vw] sm:left-[46vw] rounded-lg shadow-lg overflow-hidden"
@@ -265,10 +344,10 @@ function White() {
           backgroundColor: 'rgba(255, 255, 255, 0.1)',
           border: '1px solid rgba(255, 255, 255, 0.18)',
         }}>
-        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-5">EXCEL</h1>
+        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-5">{activeContent.boxTitle}</h1>
 
         <div className="sm:w-[85%] h-[75%] m-[1vw] bg-black bg-opacity-20 rounded-md p-[1vw] overflow-y-auto">
-          <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">This Course includes</h2>
+          <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">{activeContent.contentDescription}</h2>
 
           <Accordion allowToggle>
             {Array.from({ length: 10 }).map((_, index) => (
@@ -279,23 +358,17 @@ function White() {
                 <h3>
                   <AccordionButton className="p-[0.5vw] bg-gray-800 rounded-t-lg">
                     <Box flex="1" textAlign="left" className="font-medium text-white text-[2.5vw] sm:text-[1vw]">
-                      Level-{index + 1} {difficulty}
+                      Level-{index + 1} {activeContent.difficulty}
                     </Box>
                     <AccordionIcon color="white" />
                   </AccordionButton>
                 </h3>
                 <AccordionPanel className="p-[0.5vw] text-white text-[1vw] sm:text-[1vw] z-[50]">
-                  {difficulty === 'basics' ? (
-                    `This is the basic level content for Level ${index + 1}.`
-                  ) : difficulty === 'medium' ? (
-                    `This is the medium level content for Level ${index + 1}.`
-                  ) : (
-                    `This is the hard level content for Level ${index + 1}.`
-                  )}
+                {`This is the ${activeContent.difficulty} level content for Level ${index + 1}.`}
                 </AccordionPanel>
 
                 <a 
-                  href={buttonLink} 
+                  href={activeContent.buttonLink} 
                   target="_blank" // Opens in a new tab
                   rel="noopener noreferrer" // Prevents security vulnerabilities
                   className="hidden sm:block absolute w-[2vw] sm:w-[5.5vw] left-[20vw] sm:left-[26vw] -top-[1.1vw] sm:-top-[1.1vw] mt-[1vw] mr-[1vw] bg-black z-40 text-white p-[0.5vw] rounded-lg hover:bg-[#1f978b] transition"

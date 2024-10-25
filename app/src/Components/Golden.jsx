@@ -1,26 +1,3 @@
-// import React from 'react'
-// import earth4 from '../assets/earth4.png';
-// import pipe2 from '../assets/pipe2.svg';
-
-// function Golden() {
-//   return (
-//     <div className='relative max-w-screen-2xl h-[110vh] sm:h-[180vh]'>
-//      <div className='w-full h-full'>
-//         <img src={earth4} alt="" className='w-[100vw] z-[50] h-full object-cover' />
-//         {/* <img 
-//   src={pipe2} 
-//   alt="Pipe" 
-//   className='absolute w-[150vw] h-[250vh] z-[50] -top-[19.8vw] right-[2vw] opacity-100 visible'
-//   style={{ clipPath: 'inset(17.5% 0 10.5% 0)' }}       
-// /> */}
-//      </div>
-//     </div>
-//   )
-// }
-
-// export default Golden
-
-
 import React, { useState } from 'react';
 import './Golden.css';
 import earth4 from '../assets/earth4.png'; 
@@ -31,19 +8,99 @@ import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIco
 
 function Golden() {
 
+  // State for tracking active content
+  const [activeContent, setActiveContent] = useState({
+    boxTitle: "EXCEL",
+    difficulty: 'basics',
+    buttonLink: 'https://example.com',
+    contentDescription: "Click a circle to view content"
+  });
 
-  const difficulty = 'basics'; // Example of difficulty level, could be 'basics', 'medium', or 'hard'
-  const buttonLink = 'https://example.com'; // Example button link
+  // Define content for each circle
+  const circleContent = {
+    circle1: {
+      boxTitle: "EXCEL BASICS",
+      difficulty: 'basics',
+      links: [
+        "https://www.wikipedia.org/",
+        "https://www.khanacademy.org/",
+        "https://www.britannica.com/",
+        "https://www.howstuffworks.com/",
+        "https://www.sparknotes.com/"
+      ],
+      description: "Learn Excel fundamentals and basic operations"
+    },
+    circle2: {
+      boxTitle: "EXCEL INTERMEDIATE",
+      difficulty: 'medium',
+      links: [
+        "https://www.github.com/",
+        "https://www.freecodecamp.org/",
+        "https://www.hackerrank.com/",
+        "https://www.coursera.org/",
+        "https://www.udemy.com/"
+      ],
+      description: "Explore advanced Excel features and formulas"
+    },
+    circle3: {
+      boxTitle: "EXCEL ADVANCED",
+      difficulty: 'hard',
+      links: [
+        "https://www.leetcode.com/",
+        "https://www.topcoder.com/",
+        "https://www.codewars.com/",
+        "https://projecteuler.net/",
+        "https://www.codeforces.com/"
+      ],
+      description: "Master complex Excel functions and macros"
+    },
+    circle4: {
+      boxTitle: "EXCEL QUIZ",
+      difficulty: 'quiz',
+      links: [
+        "https://www.quizlet.com/",
+        "https://www.sporcle.com/",
+        "https://www.kahoot.com/",
+        "https://www.trivia.com/",
+        "https://www.funtrivia.com/"
+      ],
+      description: "Test your Excel knowledge"
+    },
+    circle5: {
+      boxTitle: "EXCEL RESOURCES",
+      difficulty: 'resources',
+      links: [
+        "https://www.stackoverflow.com/",
+        "https://www.medium.com/",
+        "https://www.codecademy.com/",
+        "https://www.reddit.com/r/learnprogramming/",
+        "https://developer.mozilla.org/"
+      ],
+      description: "Additional Excel learning resources"
+    }
+  };
 
-  const [boxContent, setBoxContent] = useState("Click an SVG element");
- 
-   
-   const handleClick1 = () => setBoxContent("Clicked on Circle 1");
-   const handleClick2 = () => setBoxContent("Clicked on Circle 2");
-   const handleClick3 = () => setBoxContent("Clicked on Circle 3");
-   const handleClick4 = () => setBoxContent("Clicked on Circle 4");
-   const handleClick5 = () => setBoxContent("Clicked on Circle 5");
-
+  // Click handlers for SVG elements
+  const handleClick1 = () => setActiveContent({
+    ...circleContent.circle1,
+    buttonLink: circleContent.circle1.links[0]
+  });
+  const handleClick2 = () => setActiveContent({
+    ...circleContent.circle2,
+    buttonLink: circleContent.circle2.links[0]
+  });
+  const handleClick3 = () => setActiveContent({
+    ...circleContent.circle3,
+    buttonLink: circleContent.circle3.links[0]
+  });
+  const handleClick4 = () => setActiveContent({
+    ...circleContent.circle4,
+    buttonLink: circleContent.circle4.links[0]
+  });
+  const handleClick5 = () => setActiveContent({
+    ...circleContent.circle5,
+    buttonLink: circleContent.circle5.links[0]
+  });
   return (
     <div className='relative max-w-screen-2xl h-[110vh] sm:h-[180vh]'>
      <div className='w-full h-full'>
@@ -60,16 +117,17 @@ function Golden() {
               {/* Road Button */}
         <button 
           className="absolute w-[60vw] sm:w-[35vw] top-[7vw] sm:top-[5vw] -left-[3vw] sm:left-[9vw] z-[50] focus:outline-none transform hover:scale-105 transition-transform duration-300"
-        >
-          <img src={road7} alt="Road" className="w-full filter brightness-100 animate-pulse " />
+        >                                                                                    
+          <img src={road7} alt="Road" className="w-full filter brightness-100 " />
         </button>
 
         {/*pipe */}
 
-        <div className='absolute -top-[0] left-[13.2vw]'>
+        <div className='absolute sm:top-[10vw] sm:-left-[8vw]'>
        
 
-        <svg width="1248" height="1251" viewBox="0 0 422 408" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="1600" height="1100" viewBox="0 0 422 408" fill="none" xmlns="http://www.w3.org/2000/svg" 
+        style = {{clipPath: 'inset(10% 0 0 0)'}}>
 <g clip-path="url(#clip0_934_947)">
 <g filter="url(#filter0_i_934_947)">
 <path d="M98.9989 -2403C98.9989 -2383.23 637.32 -2176.52 259 -2250C-294.5 -2357.5 259.501 -2171 322.001 -2076C360.51 -2017.47 -62.8067 -1899.06 63.2377 -1881.5C195.995 -1863 629.291 -2047.23 106.999 -1681C-18.5005 -1593 19.001 -1536 250.001 -1482.5C446.014 -1437.1 425.001 -1285.43 307.999 -1239C-539.999 -902.5 952.499 -1229.5 94.4984 -871.5C-75.3 -800.652 586.001 -654 323.501 -663C133.021 -669.531 -108.999 -717.5 301.501 -474C584.501 -348 -338.5 -405 236.501 -269.5C811.502 -134 -379 -103 220.501 54.0002C820.002 211 -435.499 122 281.001 357.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
@@ -276,14 +334,9 @@ function Golden() {
 </clipPath>
 </defs>
         </svg>
-
-
-        
         </div>
 
-        <Box position="absolute" top="5" left="5" bg="white" p={4} boxShadow="lg">
-          {boxContent}
-        </Box>
+        
 
 
         <div className="absolute w-[45vw] sm:w-[40vw] h-[35vh] sm:h-[60vh] top-[6vw] sm:top-[2vw] left-[54vw] sm:left-[46vw] rounded-lg shadow-lg overflow-hidden"
@@ -294,10 +347,12 @@ function Golden() {
           backgroundColor: 'rgba(255, 255, 255, 0.1)',
           border: '1px solid rgba(255, 255, 255, 0.18)',
         }}>
-        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-5">EXCEL</h1>
+        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-5">{activeContent.boxTitle}</h1>
 
         <div className="sm:w-[85%] h-[75%] m-[1vw] bg-black bg-opacity-20 rounded-md p-[1vw] overflow-y-auto">
-          <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">This Course includes</h2>
+          <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">
+            {activeContent.contentDescription}
+          </h2>
 
           <Accordion allowToggle>
             {Array.from({ length: 10 }).map((_, index) => (
@@ -306,25 +361,19 @@ function Golden() {
                 className="relative z-[50] w-[35vw] sm:w-[25vw] top-1 mb-[1vw] rounded-lg bg-gray-900 border border-gray-700"
               >
                 <h3>
-                  <AccordionButton className="p-[0.5vw] bg-gray-800 rounded-t-lg">
+                <AccordionButton className="p-[0.5vw] bg-gray-800 rounded-t-lg">
                     <Box flex="1" textAlign="left" className="font-medium text-white text-[2.5vw] sm:text-[1vw]">
-                      Level-{index + 1} {difficulty}
+                      Level-{index + 1} {activeContent.difficulty}
                     </Box>
                     <AccordionIcon color="white" />
                   </AccordionButton>
                 </h3>
                 <AccordionPanel className="p-[0.5vw] text-white text-[1vw] sm:text-[1vw] z-[50]">
-                  {difficulty === 'basics' ? (
-                    `This is the basic level content for Level ${index + 1}.`
-                  ) : difficulty === 'medium' ? (
-                    `This is the medium level content for Level ${index + 1}.`
-                  ) : (
-                    `This is the hard level content for Level ${index + 1}.`
-                  )}
+                  {`This is the ${activeContent.difficulty} level content for Level ${index + 1}.`}
                 </AccordionPanel>
 
                 <a 
-                  href={buttonLink} 
+                  href={activeContent.buttonLink} 
                   target="_blank" // Opens in a new tab
                   rel="noopener noreferrer" // Prevents security vulnerabilities
                   className="hidden sm:block absolute w-[2vw] sm:w-[5.5vw] left-[20vw] sm:left-[26vw] -top-[1.1vw] sm:-top-[1.1vw] mt-[1vw] mr-[1vw] bg-black z-40 text-white p-[0.5vw] rounded-lg hover:bg-[#1f978b] transition"
@@ -337,29 +386,12 @@ function Golden() {
         </div>
       </div>
 
-      {/* <button 
+      <button 
           className="absolute w-[60vw] sm:w-[35vw] top-[7vw] sm:top-[60vw] -left-[3vw] sm:left-[55vw] z-[50] focus:outline-none transform hover:scale-105 transition-transform duration-300"
         >
           <img src={road8} alt="Road" className="w-full filter brightness-100" />
-        </button> */}
+        </button>
 
-<div className="flex justify-center items-center h-screen bg-blue-100">
-      <div className="relative">
-        {/* Flag pole */}
-        <div className="flagpole bg-gray-800 w-2 h-96"></div>
-        
-        {/* Flag itself */}
-        <div className="flag bg-red-500 w-48 h-32 absolute top-0 left-2 animate-wave">
-          {/* Triangle cut effect */}
-          <div className="triangle bg-red-600 w-0 h-0 absolute top-0 right-0"
-               style={{
-                 borderLeft: '24px solid transparent',
-                 borderBottom: '32px solid red'
-               }}>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
     </div>

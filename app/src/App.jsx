@@ -10,28 +10,31 @@ import Pink from './Components/Pink.jsx';
 
 function App() {
   return (
-    <div className="bg-red-900">
-      <div className="mb-[20vh] bg-green-400">
+    <div className="bg-red-900 ">
+     
+     <div className="mb-[8vh]">
         <Blue />
       </div>
-      <div className="mb-[20vh] bg-yellow-400">
+      <div className= 'relative w-[10vw] h-[10vh] -top-6 bg-green-700'></div>
+      {/* <div className="mb-[20vh] ">
         <Brown />
       </div>
-      <div className="mb-[20vh] bg-purple-300">
+       <div className="mb-[20vh]">
         <Purple />
       </div>
-      <div className="mb-[20vh] bg-teal-500">
+      <div className="mb-[20vh] ">
         <DBlue />
       </div>
-      <div className="mb-[20vh] bg-pink-500">
+      <div className="mb-[20vh] ">
         <White />
       </div>
-      <div className="mb-[20vh] bg-indigo-400">
+      <div className="mb-[20vh] ">
         <Pink />
       </div>
-      <div className="mb-[20vh] bg-orange-300">
+      <div className="mb-[20vh]">
         <Golden />
-      </div>
+      </div> */}
+     
     </div>
   );
 }

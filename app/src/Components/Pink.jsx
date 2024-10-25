@@ -7,20 +7,99 @@ import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIco
 
 function Pink() {
 
-       // Define difficulty and buttonLink as per your logic
-   const difficulty = 'basics'; // Example of difficulty level, could be 'basics', 'medium', or 'hard'
-   const buttonLink = 'https://example.com'; // Example button link
- 
-   
-   const [boxContent, setBoxContent] = useState("Click an SVG element");
- 
-   
-   const handleClick1 = () => setBoxContent("Clicked on Circle 1");
-   const handleClick2 = () => setBoxContent("Clicked on Circle 2");
-   const handleClick3 = () => setBoxContent("Clicked on Circle 3");
-   const handleClick4 = () => setBoxContent("Clicked on Circle 4");
-   const handleClick5 = () => setBoxContent("Clicked on Circle 5");
+  // State for tracking active content
+  const [activeContent, setActiveContent] = useState({
+    boxTitle: "EXCEL",
+    difficulty: 'basics',
+    buttonLink: 'https://example.com',
+    contentDescription: "Click a circle to view content"
+  });
 
+  // Define content for each circle
+  const circleContent = {
+    circle1: {
+      boxTitle: "EXCEL BASICS",
+      difficulty: 'basics',
+      links: [
+        "https://www.wikipedia.org/",
+        "https://www.khanacademy.org/",
+        "https://www.britannica.com/",
+        "https://www.howstuffworks.com/",
+        "https://www.sparknotes.com/"
+      ],
+      description: "Learn Excel fundamentals and basic operations"
+    },
+    circle2: {
+      boxTitle: "EXCEL INTERMEDIATE",
+      difficulty: 'medium',
+      links: [
+        "https://www.github.com/",
+        "https://www.freecodecamp.org/",
+        "https://www.hackerrank.com/",
+        "https://www.coursera.org/",
+        "https://www.udemy.com/"
+      ],
+      description: "Explore advanced Excel features and formulas"
+    },
+    circle3: {
+      boxTitle: "EXCEL ADVANCED",
+      difficulty: 'hard',
+      links: [
+        "https://www.leetcode.com/",
+        "https://www.topcoder.com/",
+        "https://www.codewars.com/",
+        "https://projecteuler.net/",
+        "https://www.codeforces.com/"
+      ],
+      description: "Master complex Excel functions and macros"
+    },
+    circle4: {
+      boxTitle: "EXCEL QUIZ",
+      difficulty: 'quiz',
+      links: [
+        "https://www.quizlet.com/",
+        "https://www.sporcle.com/",
+        "https://www.kahoot.com/",
+        "https://www.trivia.com/",
+        "https://www.funtrivia.com/"
+      ],
+      description: "Test your Excel knowledge"
+    },
+    circle5: {
+      boxTitle: "EXCEL RESOURCES",
+      difficulty: 'resources',
+      links: [
+        "https://www.stackoverflow.com/",
+        "https://www.medium.com/",
+        "https://www.codecademy.com/",
+        "https://www.reddit.com/r/learnprogramming/",
+        "https://developer.mozilla.org/"
+      ],
+      description: "Additional Excel learning resources"
+    }
+  };
+
+  // Click handlers for SVG elements
+  const handleClick1 = () => setActiveContent({
+    ...circleContent.circle1,
+    buttonLink: circleContent.circle1.links[0]
+  });
+  const handleClick2 = () => setActiveContent({
+    ...circleContent.circle2,
+    buttonLink: circleContent.circle2.links[0]
+  });
+  const handleClick3 = () => setActiveContent({
+    ...circleContent.circle3,
+    buttonLink: circleContent.circle3.links[0]
+  });
+  const handleClick4 = () => setActiveContent({
+    ...circleContent.circle4,
+    buttonLink: circleContent.circle4.links[0]
+  });
+  const handleClick5 = () => setActiveContent({
+    ...circleContent.circle5,
+    buttonLink: circleContent.circle5.links[0]
+  });
 
   return (
     <div className='relative max-w-screen-2xl h-[110vh] sm:h-[180vh]'>
@@ -265,9 +344,6 @@ function Pink() {
 </div>
         
 
-<Box position="absolute" top="5" left="5" bg="white" p={4} boxShadow="lg">
-          {boxContent}
-        </Box>
 
         <div className="absolute w-[45vw] sm:w-[40vw] h-[35vh] sm:h-[60vh] top-[6vw] sm:top-[5vw] left-[54vw] sm:left-[5vw] rounded-lg shadow-lg overflow-hidden"
         style={{
@@ -277,10 +353,12 @@ function Pink() {
           backgroundColor: 'rgba(255, 255, 255, 0.1)',
           border: '1px solid rgba(255, 255, 255, 0.18)',
         }}>
-        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-5">EXCEL</h1>
+        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-5">{activeContent.boxTitle}</h1>
 
         <div className="sm:w-[85%] h-[75%] m-[1vw] bg-black bg-opacity-20 rounded-md p-[1vw] overflow-y-auto">
-          <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">This Course includes</h2>
+          <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">
+            {activeContent.contentDescription}
+          </h2>
 
           <Accordion allowToggle>
             {Array.from({ length: 10 }).map((_, index) => (
@@ -291,23 +369,17 @@ function Pink() {
                 <h3>
                   <AccordionButton className="p-[0.5vw] bg-gray-800 rounded-t-lg">
                     <Box flex="1" textAlign="left" className="font-medium text-white text-[2.5vw] sm:text-[1vw]">
-                      Level-{index + 1} {difficulty}
+                      Level-{index + 1} {activeContent.difficulty}
                     </Box>
                     <AccordionIcon color="white" />
                   </AccordionButton>
                 </h3>
                 <AccordionPanel className="p-[0.5vw] text-white text-[1vw] sm:text-[1vw] z-[50]">
-                  {difficulty === 'basics' ? (
-                    `This is the basic level content for Level ${index + 1}.`
-                  ) : difficulty === 'medium' ? (
-                    `This is the medium level content for Level ${index + 1}.`
-                  ) : (
-                    `This is the hard level content for Level ${index + 1}.`
-                  )}
+                {`This is the ${activeContent.difficulty} level content for Level ${index + 1}.`}
                 </AccordionPanel>
 
                 <a 
-                  href={buttonLink} 
+                  href={activeContent.buttonLink} 
                   target="_blank" // Opens in a new tab
                   rel="noopener noreferrer" // Prevents security vulnerabilities
                   className="hidden sm:block absolute w-[2vw] sm:w-[5.5vw] left-[20vw] sm:left-[26vw] -top-[1.1vw] sm:-top-[1.1vw] mt-[1vw] mr-[1vw] bg-black z-40 text-white p-[0.5vw] rounded-lg hover:bg-[#1f978b] transition"

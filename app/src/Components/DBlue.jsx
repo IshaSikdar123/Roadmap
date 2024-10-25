@@ -6,18 +6,99 @@ import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIco
 
 function DBlue() {
 
-   // Define difficulty and buttonLink as per your logic
-   const difficulty = 'basics'; // Example of difficulty level, could be 'basics', 'medium', or 'hard'
-   const buttonLink = 'https://example.com'; // Example button link
- 
-   const [boxContent, setBoxContent] = useState("Click an SVG element");
- 
-   
-   const handleClick1 = () => setBoxContent("Clicked on Circle 1");
-   const handleClick2 = () => setBoxContent("Clicked on Circle 2");
-   const handleClick3 = () => setBoxContent("Clicked on Circle 3");
-   const handleClick4 = () => setBoxContent("Clicked on Circle 4");
-   const handleClick5 = () => setBoxContent("Clicked on Circle 5");
+  // State for tracking active content
+  const [activeContent, setActiveContent] = useState({
+    boxTitle: "EXCEL",
+    difficulty: 'basics',
+    buttonLink: 'https://example.com',
+    contentDescription: "Click a circle to view content"
+  });
+
+  // Define content for each circle
+  const circleContent = {
+    circle1: {
+      boxTitle: "EXCEL BASICS",
+      difficulty: 'basics',
+      links: [
+        "https://www.wikipedia.org/",
+        "https://www.khanacademy.org/",
+        "https://www.britannica.com/",
+        "https://www.howstuffworks.com/",
+        "https://www.sparknotes.com/"
+      ],
+      description: "Learn Excel fundamentals and basic operations"
+    },
+    circle2: {
+      boxTitle: "EXCEL INTERMEDIATE",
+      difficulty: 'medium',
+      links: [
+        "https://www.github.com/",
+        "https://www.freecodecamp.org/",
+        "https://www.hackerrank.com/",
+        "https://www.coursera.org/",
+        "https://www.udemy.com/"
+      ],
+      description: "Explore advanced Excel features and formulas"
+    },
+    circle3: {
+      boxTitle: "EXCEL ADVANCED",
+      difficulty: 'hard',
+      links: [
+        "https://www.leetcode.com/",
+        "https://www.topcoder.com/",
+        "https://www.codewars.com/",
+        "https://projecteuler.net/",
+        "https://www.codeforces.com/"
+      ],
+      description: "Master complex Excel functions and macros"
+    },
+    circle4: {
+      boxTitle: "EXCEL QUIZ",
+      difficulty: 'quiz',
+      links: [
+        "https://www.quizlet.com/",
+        "https://www.sporcle.com/",
+        "https://www.kahoot.com/",
+        "https://www.trivia.com/",
+        "https://www.funtrivia.com/"
+      ],
+      description: "Test your Excel knowledge"
+    },
+    circle5: {
+      boxTitle: "EXCEL RESOURCES",
+      difficulty: 'resources',
+      links: [
+        "https://www.stackoverflow.com/",
+        "https://www.medium.com/",
+        "https://www.codecademy.com/",
+        "https://www.reddit.com/r/learnprogramming/",
+        "https://developer.mozilla.org/"
+      ],
+      description: "Additional Excel learning resources"
+    }
+  };
+
+  // Click handlers for SVG elements
+  const handleClick1 = () => setActiveContent({
+    ...circleContent.circle1,
+    buttonLink: circleContent.circle1.links[0]
+  });
+  const handleClick2 = () => setActiveContent({
+    ...circleContent.circle2,
+    buttonLink: circleContent.circle2.links[0]
+  });
+  const handleClick3 = () => setActiveContent({
+    ...circleContent.circle3,
+    buttonLink: circleContent.circle3.links[0]
+  });
+  const handleClick4 = () => setActiveContent({
+    ...circleContent.circle4,
+    buttonLink: circleContent.circle4.links[0]
+  });
+  const handleClick5 = () => setActiveContent({
+    ...circleContent.circle5,
+    buttonLink: circleContent.circle5.links[0]
+  });
 
   return (
     <div className='relative max-w-screen-2xl h-[110vh] sm:h-[180vh]'>
@@ -30,7 +111,7 @@ function DBlue() {
           style={{
             filter: 'brightness(300%) blur(1vw)',
             boxShadow: '0 0 10vw 8vw rgba(26, 63, 105, 1)'
-          }}
+          }} 
         >
         </div>
 
@@ -40,9 +121,10 @@ function DBlue() {
         >
           <img src={road4} alt="Road" className="w-full z-[50] filter brightness-100" />
         </button>
-
-  <div className='absolute -top-[0] -left-[2.8vw]'>
-  <svg width="1340" height="1251" viewBox="0 0 427 382" fill="none" xmlns="http://www.w3.org/2000/svg">
+ 
+  <div className='absolute sm:top-[5vw] sm:left-[20vw]'>
+  <svg width="1200" height="1151" viewBox="0 0 427 382" fill="none" xmlns="http://www.w3.org/2000/svg"
+  style={{ clipPath: 'inset(24% 0 8% 0)' }}>
 <g filter="url(#filter0_i_918_366)">
 <path d="M98.9989 -1098C98.9989 -1078.23 637.32 -871.523 259 -945C-294.5 -1052.5 259.501 -866 322.001 -771C360.51 -712.465 -62.8067 -594.064 63.2377 -576.5C195.995 -558 629.291 -742.231 106.999 -376C-18.5005 -288 19.001 -231 250.001 -177.5C446.014 -132.103 419.502 15.5717 302.5 62C-545.498 398.5 952.499 75.5002 94.4984 433.5C-75.3 504.348 586.001 651 323.501 642C133.021 635.469 -108.999 587.5 301.501 831C584.501 957 -338.5 900 236.501 1035.5C811.502 1171 -379 1202 220.501 1359C820.002 1516 -435.499 1427 281.001 1662.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
 </g>
@@ -51,7 +133,7 @@ function DBlue() {
 <path d="M301.089 339.8C301.089 345.852 296.149 350.781 290.026 350.781C283.904 350.781 278.963 345.852 278.963 339.8C278.963 333.747 283.904 328.819 290.026 328.819C296.149 328.819 301.089 333.747 301.089 339.8Z" stroke="url(#paint1_angular_918_366)" stroke-opacity="0.7" stroke-width="4.18625"/>
 </g>
 <path d="M289.959 355.113C298.429 355.113 305.299 348.289 305.299 339.866C305.299 331.443 298.429 324.619 289.959 324.619C281.49 324.619 274.619 331.443 274.619 339.866C274.619 348.289 281.49 355.113 289.959 355.113Z" stroke="url(#paint2_angular_918_366)" stroke-opacity="0.7" stroke-width="0.761137"/>
-<g filter="url(#filter2_bi_918_366)">
+<g filter="url(#filter2_bi_918_366)"> 
 <ellipse cx="67.408" cy="176.435" rx="13.49" ry="12.7522" fill="url(#paint3_linear_918_366)" onClick={handleClick1}/>
 <path d="M78.8048 176.435C78.8048 182.213 73.8147 187.094 67.408 187.094C61.0012 187.094 56.0111 182.213 56.0111 176.435C56.0111 170.658 61.0012 165.776 67.408 165.776C73.8147 165.776 78.8048 170.658 78.8048 176.435Z" stroke="url(#paint4_angular_918_366)" stroke-opacity="0.7" stroke-width="4.18625"/>
 </g>
@@ -247,22 +329,21 @@ function DBlue() {
 
 </div>      
 
-        <Box position="absolute" top="5" left="5" bg="white" p={4} boxShadow="lg">
-          {boxContent}
-        </Box>
+       
 
       <div className="absolute w-[45vw] sm:w-[40vw] h-[35vh] sm:h-[60vh] top-[6vw] sm:top-[5vw] left-[54vw] sm:left-[5vw] rounded-lg shadow-lg overflow-hidden"
         style={{
-          background: 'linear-gradient(200deg, #34ACAE 0%, #164748 100%)',
+          background: 'linear-gradient(200deg #008CFF 100%)',
           opacity: '0.8',
           backdropFilter: 'blur(15px)',
-          backgroundColor: 'rgba(255, 255, 255, 0.1)',
-          border: '1px solid rgba(255, 255, 255, 0.18)',
+          backgroundColor: 'rgba(23, 108, 164, 0.2)',
+          border: '2px solid rgba(23, 108, 164, 1)',
         }}>
-        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-5">EXCEL</h1>
+        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-5">{activeContent.boxTitle}</h1>
 
-        <div className="sm:w-[85%] h-[75%] m-[1vw] bg-black bg-opacity-20 rounded-md p-[1vw] overflow-y-auto">
-          <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">This Course includes</h2>
+        <div className="sm:w-[85%] h-[75%] m-[1vw] bg-gray-300 bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
+            >
+          <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]"> {activeContent.contentDescription}</h2>
 
           <Accordion allowToggle>
             {Array.from({ length: 10 }).map((_, index) => (
@@ -273,23 +354,17 @@ function DBlue() {
                 <h3>
                   <AccordionButton className="p-[0.5vw] bg-gray-800 rounded-t-lg">
                     <Box flex="1" textAlign="left" className="font-medium text-white text-[2.5vw] sm:text-[1vw]">
-                      Level-{index + 1} {difficulty}
+                      Level-{index + 1} {activeContent.difficulty}
                     </Box>
                     <AccordionIcon color="white" />
                   </AccordionButton>
                 </h3>
                 <AccordionPanel className="p-[0.5vw] text-white text-[1vw] sm:text-[1vw] z-[50]">
-                  {difficulty === 'basics' ? (
-                    `This is the basic level content for Level ${index + 1}.`
-                  ) : difficulty === 'medium' ? (
-                    `This is the medium level content for Level ${index + 1}.`
-                  ) : (
-                    `This is the hard level content for Level ${index + 1}.`
-                  )}
+                {`This is the ${activeContent.difficulty} level content for Level ${index + 1}.`}
                 </AccordionPanel>
 
                 <a 
-                  href={buttonLink} 
+                  href={activeContent.buttonLink} 
                   target="_blank" // Opens in a new tab
                   rel="noopener noreferrer" // Prevents security vulnerabilities
                   className="hidden sm:block absolute w-[2vw] sm:w-[5.5vw] left-[20vw] sm:left-[26vw] -top-[1.1vw] sm:-top-[1.1vw] mt-[1vw] mr-[1vw] bg-black z-40 text-white p-[0.5vw] rounded-lg hover:bg-[#1f978b] transition"
@@ -302,6 +377,23 @@ function DBlue() {
         </div>
       </div>
 
+      <div className='absolute bottom-0 sm:-bottom-[1.5vw] left-0 sm:left-[60vw] '>
+<div className="w-92 h-96 relative">
+      
+      {/* Flag pole */}
+      <div className="absolute left-14 top-[14vw] w-2 h-32 bg-gray-400" />
+      
+      {/* Triangular flag */}
+      <div className="absolute left-16 top-[13.6vw]">
+        <svg width="100" height="60" viewBox="0 0 120 60">
+          <path 
+            d="M 0,0 L 120,30 L 0,60 Z" 
+            fill="rgba(23, 105, 159,1)" 
+          />
+        </svg>
+      </div>
+    </div>
+</div>
     </div>
   )
 }
