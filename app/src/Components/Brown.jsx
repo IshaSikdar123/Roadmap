@@ -120,9 +120,9 @@ function Brown() {
       </button>
 
       {/* Interactive SVG */}
-      <div className="absolute -top-[19vw] left-0 sm:top-[9vw] sm:-left-[2vw] overflow-hidden">
-      <svg width="416" height="374" viewBox="0 0 416 374" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[100vw] sm:w-[100vw] h-screen sm:h-[180vh] "
-        style={{ clipPath: 'inset(18% 0 22% 0)' }} 
+      <div className="absolute inset-0 w-full h-full">
+      <svg width="100%" height="100%" viewBox="0 0 416 374" preserveAspectRatio='none' fill="none" xmlns="http://www.w3.org/2000/svg"  
+        // style={{ clipPath: 'inset(18% 0 22% 0)' }} 
         >
         <g filter="url(#filter0_i_894_683)"> <path d="M98.9984 -307C98.9984 -287.231 637.32 -80.5228 258.999 -154C-294.501 -261.5 259.501 -74.9998 322.001 20.0002C360.51 78.5349 -62.8072 196.936 63.2372 214.5C195.995 233 629.29 48.7693 106.998 415C-18.501 503 19.0005 560 250.001 613.5C446.014 658.897 425 810.572 307.999 857C-540 1193.5 952.499 866.5 94.4979 1224.5C-75.3004 1295.35 586.001 1442 323.501 1433C133.02 1426.47 -109 1378.5 301.5 1622C584.5 1748 -338.501 1691 236.5 1826.5C811.502 1962 -379.001 1993 220.5 2150C820.002 2307 -435.5 2218 281 2453.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
          </g>

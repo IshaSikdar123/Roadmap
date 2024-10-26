@@ -101,7 +101,7 @@ function White() {
     buttonLink: circleContent.circle5.links[0]
   });
   return (
-    <div className='relative max-w-screen-2xl h-[110vh] sm:h-[180vh]'>
+    <div className='relative w-full h-screen sm:h-[180vh]'>
      <div className='w-full h-full'>
         <img src={earth6} alt="" className='w-[100vw] z-[50] h-full object-cover' />
      </div>
@@ -122,8 +122,8 @@ function White() {
 
         {/*pipe */}
 
-        <div className='absolute -top-[0.1vw] -left-[8.5vw]'>
-        <svg width="1300" height="1253" viewBox="0 0 423 377" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className='absolute inset-0 w-full h-full'>
+        <svg width="100%" height="100%" viewBox="-10 0 416 374" preserveAspectRatio='none' fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_928_532)"> 
 <g filter="url(#filter0_i_928_532)">
 <path d="M98.9989 -1488C98.9989 -1468.23 637.32 -1261.52 259 -1335C-294.5 -1442.5 259.501 -1256 322.001 -1161C360.51 -1102.47 -62.8067 -984.064 63.2377 -966.5C195.995 -948 629.291 -1132.23 106.999 -766C-18.5005 -678 19.001 -621 250.001 -567.5C446.014 -522.103 425.001 -370.428 307.999 -324C-539.999 12.5002 952.499 -314.5 94.4984 43.5002C-75.3 114.348 586.001 261 323.501 252C133.021 245.469 -108.999 197.5 301.501 441C584.501 567 -338.5 510 236.501 645.5C811.502 781 -379 812 220.501 969C820.002 1126 -435.499 1037 281.001 1272.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>

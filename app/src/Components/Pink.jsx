@@ -102,7 +102,7 @@ function Pink() {
   });
 
   return (
-    <div className='relative max-w-screen-2xl h-[110vh] sm:h-[180vh]'>
+    <div className='relative w-full h-screen sm:h-[180vh]'>
     <div className='w-full h-full'>
        <img src={earth7} alt="" className='w-[100vw] z-[50] h-full object-cover' />
     </div>
@@ -123,8 +123,8 @@ function Pink() {
           <img src={road6} alt="Road" className="w-full z-[50] filter brightness-100" />
         </button>
 
-<div className='absolute -top-[0] left-[10vw]'>
-<svg width="1200" height="1351" viewBox="0 0 419 402" fill="none" xmlns="http://www.w3.org/2000/svg">
+<div className='absolute inset-0 w-full h-full'>
+<svg width="100%" height="100%" viewBox="22 15 416 374" preserveAspectRatio='none' fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_934_1202)">
     
 <g filter="url(#filter0_i_934_1202)" >

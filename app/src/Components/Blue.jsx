@@ -125,29 +125,14 @@ function Blue() {
         </button>
 
         {/* SVG elements for interaction */}
-        <div  className="absolute 
-          -top-[24vw] -left-[2vw] 
-          m-sm:-top-[51vw] m-sm:-left-[1vw]
-          m-md:-top-[20vw] m-md:-left-[6vw]
-          m-lg:-top-[18vw] m-lg:-left-[8vw]
-          md:-top-[15vw] md:-left-[6vw]
-          lg:-top-[12vw] lg:-left-[4vw]
-          2xl:-top-[10vw] 2xl:-left-[2vw]
-          3xl:top-[25vw] 3xl:-left-[0vw]"
-        style={{
-          clipPath: 'inset(0 0 8% 0)',
-        }}
+        <div  className="absolute inset-0 w-full h-full"
+        // style={{
+        //   clipPath: 'inset(0 0 8% 0)',
+        // }}
       
 >
-  <svg width="416" height="287" viewBox="0 0 416 287" fill="none" xmlns="http://www.w3.org/2000/svg" 
-        className="w-[120vw] h-[140vh]
-        m-sm:w-[100vw] m-sm:h-[130vh]
-        m-md:w-[100vw] m-md:h-[120vh]
-        m-lg:w-[90vw] m-lg:h-[110vh]
-        md:w-[80vw] md:h-[100vh]
-        lg:w-[70vw] lg:h-[90vh]
-        2xl:w-[100vw] 2xl:h-[120vh]
-        3xl:w-[90vw] 3xl:h-[120vh]">
+  <svg width="100%" height="100%" viewBox="0 -66 416 387" fill="none" preserveAspectRatio='none' xmlns="http://www.w3.org/2000/svg" 
+        >
 
 <g filter="url(#filter0_i_880_558)"> 
 <path d="M98.9984 14.0002C98.9984 33.7686 637.32 240.477 258.999 167C-294.501 59.5002 259.501 246 322.001 341C360.51 399.535 -62.8072 517.936 63.2372 535.5C195.995 554 629.29 369.769 106.998 736C-18.501 824 19.0005 881 250.001 934.5C446.014 979.897 425 1131.57 307.999 1178C-540 1514.5 952.499 1187.5 94.4979 1545.5C-75.3004 1616.35 586.001 1763 323.501 1754C133.02 1747.47 -109 1699.5 301.5 1943C584.5 2069 -338.501 2012 236.5 2147.5C811.502 2283 -379.001 2314 220.5 2471C820.002 2628 -435.5 2539 281 2774.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
@@ -334,7 +319,7 @@ function Blue() {
 
 
  {/* Flag*/}
- <div className='absolute 
+ {/* <div className='absolute 
   -bottom-[29vw] left-[48vw] 
   m-sm:bottom-[1vw] m-sm:left-[43vw] '
    
@@ -353,7 +338,7 @@ function Blue() {
         </svg>
       </div>
     </div>
-</div>
+</div> */}
 
 
 {/* <div className="absolute bg-red-900 

@@ -101,7 +101,7 @@ function DBlue() {
   });
 
   return (
-    <div className='relative max-w-screen-2xl h-[110vh] sm:h-[180vh]'>
+    <div className='relative w-full h-screen sm:h-[180vh]'>
      <div className='w-full h-full'>
         <img src={earth5} alt="" className='w-[100vw] z-[50] h-full object-cover' />
      </div>
@@ -122,11 +122,10 @@ function DBlue() {
           <img src={road4} alt="Road" className="w-full z-[50] filter brightness-100" />
         </button>
  
-  <div className='absolute sm:top-[5vw] sm:left-[20vw]'>
-  <svg width="1200" height="1151" viewBox="0 0 427 382" fill="none" xmlns="http://www.w3.org/2000/svg"
-  style={{ clipPath: 'inset(24% 0 8% 0)' }}>
+  <div className='absolute inset-0 w-full h-full'>
+  <svg width="100%" height="100%" viewBox="-40 28.8 416 374" preserveAspectRatio='none' fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_i_918_366)">
-<path d="M98.9989 -1098C98.9989 -1078.23 637.32 -871.523 259 -945C-294.5 -1052.5 259.501 -866 322.001 -771C360.51 -712.465 -62.8067 -594.064 63.2377 -576.5C195.995 -558 629.291 -742.231 106.999 -376C-18.5005 -288 19.001 -231 250.001 -177.5C446.014 -132.103 419.502 15.5717 302.5 62C-545.498 398.5 952.499 75.5002 94.4984 433.5C-75.3 504.348 586.001 651 323.501 642C133.021 635.469 -108.999 587.5 301.501 831C584.501 957 -338.5 900 236.501 1035.5C811.502 1171 -379 1202 220.501 1359C820.002 1516 -435.499 1427 281.001 1662.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
+<path d="M98.9989 -1098C98.9989 -1078.23 637.32 -871.523 259 -945C-294.5 -1052.5 259.501 -866 322.001 -771C360.51 -712.465 -62.8067 -594.064 63.2377 -576.5C195.995 -558 629.291 -742.231 106.999 -376C-18.5005 -288 19.001 -231 250.001 -177.5C776.014 -132.103 419.502 15.5717 325.5 62C-545.498 398.5 932.499 75.5002 94.4984 433.5C-75.3 504.348 586.001 651 323.501 642C133.021 635.469 -108.999 587.5 301.501 831C584.501 957 -338.5 900 236.501 1035.5C811.502 1171 -379 1202 220.501 1359C820.002 1516 -435.499 1427 281.001 1662.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
 </g>
 <g filter="url(#filter1_bi_918_366)">
 <ellipse cx="290.026" cy="339.8" rx="13.1562" ry="13.0744" fill="url(#paint0_linear_918_366)" onClick={handleClick5}/>

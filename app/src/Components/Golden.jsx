@@ -102,7 +102,7 @@ function Golden() {
     buttonLink: circleContent.circle5.links[0]
   });
   return (
-    <div className='relative max-w-screen-2xl h-[110vh] sm:h-[180vh]'>
+    <div className='relative w-full h-screen sm:h-[180vh]'>
      <div className='w-full h-full'>
         <img src={earth4} alt="" className='w-[100vw] z-[50] h-full object-cover' />
      </div>
@@ -123,14 +123,14 @@ function Golden() {
 
         {/*pipe */}
 
-        <div className='absolute sm:top-[10vw] sm:-left-[8vw]'>
+        <div className='absolute inset-0 w-full h-full'>
        
 
-        <svg width="1600" height="1100" viewBox="0 0 422 408" fill="none" xmlns="http://www.w3.org/2000/svg" 
-        style = {{clipPath: 'inset(10% 0 0 0)'}}>
+        <svg width="100%" height="100%" viewBox="10 -45 416 374" preserveAspectRatio='none' fill="none" xmlns="http://www.w3.org/2000/svg" 
+        >
 <g clip-path="url(#clip0_934_947)">
 <g filter="url(#filter0_i_934_947)">
-<path d="M98.9989 -2403C98.9989 -2383.23 637.32 -2176.52 259 -2250C-294.5 -2357.5 259.501 -2171 322.001 -2076C360.51 -2017.47 -62.8067 -1899.06 63.2377 -1881.5C195.995 -1863 629.291 -2047.23 106.999 -1681C-18.5005 -1593 19.001 -1536 250.001 -1482.5C446.014 -1437.1 425.001 -1285.43 307.999 -1239C-539.999 -902.5 952.499 -1229.5 94.4984 -871.5C-75.3 -800.652 586.001 -654 323.501 -663C133.021 -669.531 -108.999 -717.5 301.501 -474C584.501 -348 -338.5 -405 236.501 -269.5C811.502 -134 -379 -103 220.501 54.0002C820.002 211 -435.499 122 281.001 357.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
+<path d="M98.9989 -2403C98.9989 -2383.23 637.32 -2176.52 259 -2250C-294.5 -2357.5 259.501 -2171 322.001 -2076C360.51 -2017.47 -62.8067 -1899.06 63.2377 -1881.5C195.995 -1863 629.291 -2047.23 106.999 -1681C-18.5005 -1593 19.001 -1536 250.001 -1482.5C446.014 -1437.1 425.001 -1285.43 307.999 -1239C-539.999 -902.5 952.499 -1229.5 94.4984 -871.5C-75.3 -800.652 586.001 -654 323.501 -663C133.021 -669.531 -108.999 -717.5 301.501 -474C584.501 -348 -338.5 -405 236.501 -269.5C811.502 -134 -379 -44 220.501 54.0002C820.002 211 -435.499 122 281.001 357.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
 </g>
 <g filter="url(#filter1_bi_934_947)"onClick={handleClick2}>
 <circle cx="170.271" cy="183.145" r="12.4953" fill="url(#paint0_linear_934_947)"/>
