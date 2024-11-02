@@ -11,24 +11,23 @@ import Pink from './Components/Pink.jsx';
 function App() {
   return (
     <div>
-     
 
-        <Blue />
+      {/* Will call api here for getting selected path information than will render the cities */}
 
+    {/* When displaying customized roadmap the position should always start from 1 irrespective of city component */ }
+        <Blue position={7} />
 
-        <Brown />
+        <Brown position={2} />
+{/* 
+        <Purple position={3} />
 
-        <Purple />
+        <DBlue position={4} />
 
-        <DBlue />
+        <White position={5} />
 
+        <Pink position={6} /> */}
 
-        <White />
-
-        <Pink />
-
-
-        <Golden />
+        <Golden position={4} />
 
      
     </div>
