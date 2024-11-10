@@ -15,19 +15,19 @@ function App() {
       {/* Will call api here for getting selected path information then we'll render the cities */}
 
     {/* When displaying customized roadmap the position should always start from 1 irrespective of city component */ }
-        <Blue position={7} />
+        <Blue position={5} />
 
-        <Brown position={2} />
-{/* 
-        <Purple position={3} />
+        <Brown position={7} />
 
-        <DBlue position={4} />
+        <Purple position={7} />
+ 
+        <DBlue position={7} />
 
-        <White position={5} />
+        <White position={7} />
 
-        <Pink position={6} /> */}
+        <Pink position={7} />
 
-        <Golden position={4} />
+        <Golden position={6} /> 
 
      
     </div>
