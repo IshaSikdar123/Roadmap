@@ -23,7 +23,7 @@ function App() {
  
         <DBlue position={6} />
 
-        <White position={1} />
+        <White position={6} />
 
         <Pink position={7} />
 
