@@ -21,9 +21,9 @@ function App() {
 
         <Purple position={7} />
  
-        <DBlue position={7} />
+        <DBlue position={6} />
 
-        <White position={7} />
+        <White position={1} />
 
         <Pink position={7} />
 
