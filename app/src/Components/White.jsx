@@ -1488,7 +1488,7 @@ return (
         
 
 
-        <div className="absolute w-[45vw] sm:w-[40vw] h-[35vh] sm:h-[60vh] top-[6vw] sm:top-[2vw] left-[54vw] sm:left-[46vw] rounded-lg shadow-lg overflow-hidden"
+        <div className="absolute w-[45vw] sm:w-[40vw] h-[25vh] sm:h-[60vh] top-[6vw] sm:top-[2vw] left-[54vw] sm:left-[46vw] rounded-lg shadow-lg overflow-hidden"
         style={{
           background: 'linear-gradient(200deg #00313B 100%)',
           opacity: '0.8',
@@ -1498,7 +1498,7 @@ return (
         }}>
         <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-2">{activeContent.boxTitle}</h1>
 
-        <div className="sm:w-[36vw] h-[48vh] m-[1vw] bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
+        <div className="sm:w-[36vw] h-[75%] m-[1vw] bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
         style={{
           background: 'linear-gradient(180deg #6AC8DB 50% , #BEF4FF 50%)',
           backdropFilter: 'blur(15px)',

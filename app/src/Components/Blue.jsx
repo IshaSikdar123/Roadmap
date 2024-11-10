@@ -1497,7 +1497,7 @@ return (
           {activeContent.boxTitle}
         </h1>
 
-        <div className="sm:w-[36vw] h-[48vh] m-[1vw] bg-black bg-opacity-20 rounded-md p-[1vw] overflow-y-auto">
+        <div className="sm:w-[36vw] h-[75%] m-[1vw] bg-black bg-opacity-20 rounded-md p-[1vw] overflow-y-auto">
           <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">
             {activeContent.contentDescription}
           </h2>

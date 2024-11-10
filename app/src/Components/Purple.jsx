@@ -1481,7 +1481,7 @@ return (
         {svgs[position]}
       </div>
 
-      <div className="absolute w-[45vw] sm:w-[40vw] h-[35vh] sm:h-[60vh] top-[6vw] sm:top-[2vw] left-[54vw] sm:left-[46vw] rounded-lg shadow-lg overflow-hidden"
+      <div className="absolute w-[45vw] sm:w-[40vw] h-[25vh] sm:h-[60vh] top-[6vw] sm:top-[2vw] left-[54vw] sm:left-[46vw] rounded-lg shadow-lg overflow-hidden"
         style={{
           background: 'linear-gradient(200deg #FDB9FB 100%)',
           opacity: '0.8',
@@ -1489,7 +1489,7 @@ return (
           backgroundColor: 'rgba(153, 117, 153, 0.3)',
           border: '1.5px solid rgba(153, 117, 153, 1)',
         }}>
-        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-2">{activeContent.boxTitle}</h1>
+        <h1 className="text-white text-[4vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-2">{activeContent.boxTitle}</h1>
 
         <div className="sm:w-[36vw] h-[75%] m-[1vw] bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
         style={{

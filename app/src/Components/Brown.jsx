@@ -1470,7 +1470,7 @@ return (
 
       {/* Road Button */}
       <button 
-        className="absolute w-[60vw] z-[50] sm:w-[30vw] top-[7vw] sm:top-5 left-[38vw] sm:left-[57vw] focus:outline-none transform hover:scale-105 transition-transform duration-300"
+        className="absolute w-[55vw] z-[50] sm:w-[30vw] top-[7vw] sm:top-5 left-[45vw] sm:left-[57vw] focus:outline-none transform hover:scale-105 transition-transform duration-300"
       >
         <img src={road2} alt="Road" className="w-full z-[50] filter brightness-100" />
       </button>
@@ -1481,7 +1481,7 @@ return (
       </div>
 
       {/* Dynamic Content Box */}
-      <div className="absolute w-[45vw] sm:w-[40vw] h-[35vh] sm:h-[60vh] top-[6vw] sm:top-[5vw] left-[54vw] sm:left-[5vw] rounded-lg shadow-lg overflow-hidden"
+      <div className="absolute w-[45vw] sm:w-[40vw] h-[25vh] sm:h-[60vh] top-[6vw] sm:top-[5vw] left-[3vw] sm:left-[5vw] rounded-lg shadow-lg overflow-hidden"
         style={{
           background: 'linear-gradient(180deg, #761110 0% , #DC201E 40%)',
           opacity: '0.8',
@@ -1493,7 +1493,7 @@ return (
           {activeContent.boxTitle}
         </h1>
 
-        <div className="sm:w-[36vw] h-[48vh] m-[1vw] bg-white bg-opacity-20 rounded-md p-[1vw] overflow-y-auto">
+        <div className="sm:w-[36vw] h-[75%] m-[1vw] bg-white bg-opacity-20 rounded-md p-[1vw] overflow-y-auto">
           <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">
             {activeContent.contentDescription}
           </h2>

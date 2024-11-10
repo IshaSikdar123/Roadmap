@@ -1465,7 +1465,7 @@ return (
     </div>
 
     <div 
-          className="absolute top-[30vw] sm:top-[15vw] left-[25vw] sm:left-[70vw] w-[4vw] h-[4vw] rounded-full bg-[#e70dff]"
+          className="absolute top-[22vw] sm:top-[15vw] left-[78vw] sm:left-[70vw] w-[4vw] h-[4vw] rounded-full bg-[#e70dff]"
           style={{
             filter: 'brightness(300%) blur(1vw)',
             boxShadow: '0 0 10vw 8vw rgba(231, 13, 255, 0.5)'
@@ -1475,7 +1475,7 @@ return (
 
         {/* Road Button */}
         <button 
-          className="absolute w-[55vw] z-[50] sm:w-[35vw] top-[7vw] sm:top-[6.5vw] -left-[3vw] sm:left-[57vw] focus:outline-none transform hover:scale-105 transition-transform duration-300"
+          className="absolute w-[70vw] z-[50] sm:w-[35vw] top-[10vw] sm:top-[6.5vw] left-[47vw] sm:left-[57vw] focus:outline-none transform hover:scale-105 transition-transform duration-300"
         >
           <img src={road6} alt="Road" className="w-full z-[50] filter brightness-100" />
         </button>
@@ -1486,7 +1486,7 @@ return (
         
 
 
-        <div className="absolute w-[45vw] sm:w-[40vw] h-[35vh] sm:h-[60vh] top-[6vw] sm:top-[5vw] left-[54vw] sm:left-[5vw] rounded-lg shadow-lg overflow-hidden"
+        <div className="absolute w-[45vw] sm:w-[40vw] h-[25vh] sm:h-[60vh] top-[6vw] sm:top-[5vw] left-[4vw] sm:left-[5vw] rounded-lg shadow-lg overflow-hidden"
         style={{
           background: 'linear-gradient(200deg #FF0083 100%)',
           opacity: '0.8',
@@ -1496,7 +1496,7 @@ return (
         }}>
         <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-2">{activeContent.boxTitle}</h1>
 
-        <div className="sm:w-[36vw] h-[48vh] m-[1vw] bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
+        <div className="sm:w-[36vw] h-[75%] m-[1vw] bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
         style={{
           background: 'linear-gradient(180deg #E992BF 50% , #BB2974 50%)',
           backdropFilter: 'blur(15px)',

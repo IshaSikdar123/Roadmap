@@ -1463,7 +1463,7 @@ return (
      </div>
 
      <div 
-          className="absolute top-[30vw] sm:top-[15vw] left-[25vw] sm:left-[70vw] w-[4vw] h-[4vw] rounded-full bg-[#1a3f69]"
+          className="absolute top-[30vw] sm:top-[15vw] left-[74vw] sm:left-[70vw] w-[4vw] h-[4vw] rounded-full bg-[#1a3f69]"
           style={{
             filter: 'brightness(300%) blur(1vw)',
             boxShadow: '0 0 10vw 8vw rgba(26, 63, 105, 1)'
@@ -1473,7 +1473,7 @@ return (
 
         {/* Road Button */}
         <button 
-          className="absolute w-[55vw] z-[50] sm:w-[30vw] top-[7vw] sm:top-[9.5vw] -left-[3vw] sm:left-[57vw] focus:outline-none transform hover:scale-105 transition-transform duration-300"
+          className="absolute w-[55vw] z-[50] sm:w-[30vw] top-[15vw] sm:top-[9.5vw] left-[48vw] sm:left-[57vw] focus:outline-none transform hover:scale-105 transition-transform duration-300"
         >
           <img src={road4} alt="Road" className="w-full z-[50] filter brightness-100" />
         </button>
@@ -1485,7 +1485,7 @@ return (
 
        
 
-      <div className="absolute w-[45vw] sm:w-[40vw] h-[35vh] sm:h-[60vh] top-[6vw] sm:top-[5vw] left-[54vw] sm:left-[5vw] rounded-lg shadow-lg overflow-hidden"
+      <div className="absolute w-[45vw] sm:w-[40vw] h-[25vh] sm:h-[60vh] top-[6vw] sm:top-[5vw] left-[5vw] sm:left-[5vw] rounded-lg shadow-lg overflow-hidden"
         style={{
           background: 'linear-gradient(200deg #008CFF 100%)',
           opacity: '0.8',
@@ -1495,7 +1495,7 @@ return (
         }}>
         <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-2.5">{activeContent.boxTitle}</h1>
 
-        <div className="sm:w-[36vw] h-[48vh] m-[1vw] bg-gray-300 bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
+        <div className="sm:w-[36vw] h-[75%] m-[1vw] bg-gray-300 bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
             >
           <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]"> {activeContent.contentDescription}</h2>
 
