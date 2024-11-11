@@ -112,12 +112,12 @@ function Golden({ position }) {
 <path d="M98.9984 14.0002C98.9984 33.7686 637.32 240.477 258.999 167C-294.501 59.5002 259.501 246 322.001 341C360.51 399.535 -62.8072 517.936 63.2372 535.5C195.995 554 629.29 369.769 106.998 736C-18.501 824 19.0005 881 250.001 934.5C446.014 979.897 425 1131.57 307.999 1178C-540 1514.5 952.499 1187.5 94.4979 1545.5C-75.3004 1616.35 586.001 1763 323.501 1754C133.02 1747.47 -109 1699.5 301.5 1943C584.5 2069 -338.501 2012 236.5 2147.5C811.502 2283 -379.001 2314 220.5 2471C820.002 2628 -435.5 2539 281 2774.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
 </g>
 <g filter="url(#filter1_bi_880_558)">
-<circle cx="340.27" cy="139.145" r="12.4953" fill="#989f22" fill-opacity="1" onClick={handleClick1}/>
+<circle cx="340.27" cy="139.145" r="12.4953" fill="#989f22" fill-opacity="1" onClick={handleClick2}/>
 <circle cx="340.27" cy="139.145" r="10.4022" stroke="#989f22" stroke-opacity="0.7" stroke-width="4.18625"/>
 </g>
 <circle cx="340.207" cy="139.208" r="14.5885" stroke="url(#paint1_angular_880_558)" stroke-opacity="0.7" stroke-width="0.761137"/>
 <g filter="url(#filter2_bi_880_558)">
-<circle cx="54.2702" cy="173.111" r="12.4953" fill="#989f22" fill-opacity="1" onClick={handleClick2}/>
+<circle cx="54.2702" cy="173.111" r="12.4953" fill="#989f22" fill-opacity="1" onClick={handleClick4}/>
 <circle cx="54.2702" cy="173.111" r="10.4022" stroke="url(#paint2_angular_880_558)" stroke-opacity="0.7" stroke-width="4.18625"/>
 </g>
 <circle cx="54.2069" cy="173.175" r="14.5885" stroke="url(#paint3_angular_880_558)" stroke-opacity="0.7" stroke-width="0.761137"/>
@@ -127,7 +127,7 @@ function Golden({ position }) {
 </g>
 <circle cx="261.547" cy="169.208" r="14.5885" stroke="url(#paint5_angular_880_558)" stroke-opacity="0.7" stroke-width="0.761137"/>
 <g filter="url(#filter4_bi_880_558)">
-<circle cx="252.311" cy="92.4953" r="12.4953" fill="#989f22" fill-opacity="1" onClick={handleClick4}/>
+<circle cx="252.311" cy="92.4953" r="12.4953" fill="#989f22" fill-opacity="1" onClick={handleClick1}/>
 <circle cx="252.311" cy="92.4953" r="10.4022" stroke="url(#paint6_angular_880_558)" stroke-opacity="0.7" stroke-width="4.18625"/>
 </g>
 <circle cx="252.207" cy="92.2078" r="14.5885" stroke="url(#paint7_angular_880_558)" stroke-opacity="0.7" stroke-width="0.761137"/>
@@ -265,12 +265,12 @@ return (
       </g>
 
       <g filter="url(#filter4_bi_894_683)">
-        <circle cx="312.006" cy="254.272" r="12.4953" fill="#989f22" onClick={handleClick4} />
+        <circle cx="312.006" cy="254.272" r="12.4953" fill="#989f22" onClick={handleClick5} />
         <circle cx="312.006" cy="254.272" r="10.4022" stroke="#989f22" strokeOpacity="0.7" strokeWidth="4.18625" />
       </g>
 
       <g filter="url(#filter5_bi_894_683)">
-        <circle cx="287.006" cy="184.399" r="12.4953" fill="#989f22" onClick={handleClick5} />
+        <circle cx="287.006" cy="184.399" r="12.4953" fill="#989f22" onClick={handleClick4} />
         <circle cx="287.006" cy="184.399" r="10.4022" stroke="#989f22" strokeOpacity="0.7" strokeWidth="4.18625" />
       </g>
 
@@ -449,12 +449,12 @@ return (
 </g>
 <path d="M213.406 215.381C223.764 215.381 232.194 207.393 232.194 197.5C232.194 187.607 223.764 179.619 213.406 179.619C203.049 179.619 194.619 187.607 194.619 197.5C194.619 207.393 203.049 215.381 213.406 215.381Z" stroke="url(#paint8_angular_902_656)" stroke-opacity="0.7" stroke-width="0.761137"/>
 <g filter="url(#filter4_bi_902_656)">
-<ellipse cx="296.489" cy="220.422" rx="16.1879" ry="15.3906" fill="#989f22"  onClick={handleClick4} />
+<ellipse cx="296.489" cy="220.422" rx="16.1879" ry="15.3906" fill="#989f22"  onClick={handleClick5} />
 <path d="M310.583 220.422C310.583 227.668 304.374 233.719 296.489 233.719C288.603 233.719 282.394 227.668 282.394 220.422C282.394 213.176 288.603 207.124 296.489 207.124C304.374 207.124 310.583 213.176 310.583 220.422Z" stroke="#989f22" stroke-opacity="0.7" stroke-width="4.18625"/>
 </g>
 <path d="M296.406 238.381C306.764 238.381 315.194 230.393 315.194 220.5C315.194 210.607 306.764 202.619 296.406 202.619C286.049 202.619 277.619 210.607 277.619 220.5C277.619 230.393 286.049 238.381 296.406 238.381Z" stroke="url(#paint11_angular_902_656)" stroke-opacity="0.7" stroke-width="0.761137"/>
 <g filter="url(#filter5_bi_902_656)">
-<ellipse cx="366.489" cy="264.422" rx="16.1879" ry="15.3906" fill="#989f22"  onClick={handleClick5} />
+<ellipse cx="366.489" cy="264.422" rx="16.1879" ry="15.3906" fill="#989f22"  onClick={handleClick4} />
 <path d="M380.583 264.422C380.583 271.668 374.374 277.719 366.489 277.719C358.603 277.719 352.394 271.668 352.394 264.422C352.394 257.176 358.603 251.124 366.489 251.124C374.374 251.124 380.583 257.176 380.583 264.422Z" stroke="#989f22" stroke-opacity="0.7" stroke-width="4.18625"/>
 </g>
 <path d="M366.406 282.381C376.764 282.381 385.194 274.393 385.194 264.5C385.194 254.607 376.764 246.619 366.406 246.619C356.049 246.619 347.619 254.607 347.619 264.5C347.619 274.393 356.049 282.381 366.406 282.381Z" stroke="url(#paint14_angular_902_656)" stroke-opacity="0.7" stroke-width="0.761137"/>
@@ -637,7 +637,7 @@ return (
     <path d="M98.9989 -1098C98.9989 -1078.23 637.32 -871.523 259 -945C-294.5 -1052.5 259.501 -866 322.001 -771C360.51 -712.465 -62.8067 -594.064 63.2377 -576.5C195.995 -558 629.291 -742.231 106.999 -376C-18.5005 -288 19.001 -231 250.001 -177.5C776.014 -132.103 419.502 15.5717 325.5 62C-545.498 398.5 932.499 75.5002 94.4984 433.5C-75.3 504.348 586.001 651 323.501 642C133.021 635.469 -108.999 587.5 301.501 831C584.501 957 -338.5 900 236.501 1035.5C811.502 1171 -379 1202 220.501 1359C820.002 1516 -435.499 1427 281.001 1662.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
     </g>
     <g filter="url(#filter1_bi_918_366)">
-    <ellipse cx="290.026" cy="339.8" rx="13.1562" ry="13.0744" fill="#989f22" onClick={handleClick5}/>
+    <ellipse cx="290.026" cy="339.8" rx="13.1562" ry="13.0744" fill="#989f22" onClick={handleClick4}/>
     <path d="M301.089 339.8C301.089 345.852 296.149 350.781 290.026 350.781C283.904 350.781 278.963 345.852 278.963 339.8C278.963 333.747 283.904 328.819 290.026 328.819C296.149 328.819 301.089 333.747 301.089 339.8Z" stroke="#989f22" stroke-opacity="0.7" stroke-width="4.18625"/>
     </g>
     <path d="M289.959 355.113C298.429 355.113 305.299 348.289 305.299 339.866C305.299 331.443 298.429 324.619 289.959 324.619C281.49 324.619 274.619 331.443 274.619 339.866C274.619 348.289 281.49 355.113 289.959 355.113Z" stroke="url(#paint2_angular_918_366)" stroke-opacity="0.7" stroke-width="0.761137"/>
@@ -657,7 +657,7 @@ return (
     </g>
     <path d="M238.753 254.247C247.645 254.247 254.887 247.409 254.887 238.933C254.887 230.457 247.645 223.619 238.753 223.619C229.862 223.619 222.619 230.457 222.619 238.933C222.619 247.409 229.862 254.247 238.753 254.247Z" stroke="url(#paint11_angular_918_366)" stroke-opacity="0.7" stroke-width="0.761137"/>
     <g filter="url(#filter5_bi_918_366)">
-    <ellipse cx="358.823" cy="260.866" rx="13.8546" ry="13.1331" fill="#989f22" onClick={handleClick4}/>
+    <ellipse cx="358.823" cy="260.866" rx="13.8546" ry="13.1331" fill="#989f22" onClick={handleClick5}/>
     <path d="M370.585 260.866C370.585 266.859 365.426 271.906 358.823 271.906C352.221 271.906 347.062 266.859 347.062 260.866C347.062 254.873 352.221 249.826 358.823 249.826C365.426 249.826 370.585 254.873 370.585 260.866Z" stroke="#989f22" stroke-opacity="0.7" stroke-width="4.18625"/>
     </g>
     <path d="M358.753 276.247C367.645 276.247 374.887 269.409 374.887 260.933C374.887 252.457 367.645 245.619 358.753 245.619C349.862 245.619 342.619 252.457 342.619 260.933C342.619 269.409 349.862 276.247 358.753 276.247Z" stroke="url(#paint14_angular_918_366)" stroke-opacity="0.7" stroke-width="0.761137"/>
@@ -855,12 +855,12 @@ return (
     </g>
     <path d="M266.5 263.398C275.271 263.398 282.381 256.284 282.381 247.509C282.381 238.734 275.271 231.619 266.5 231.619C257.729 231.619 250.619 238.734 250.619 247.509C250.619 256.284 257.729 263.398 266.5 263.398Z" stroke="url(#paint8_angular_928_532)" stroke-opacity="0.7" stroke-width="0.761137"/>
     <g filter="url(#filter4_bi_928_532)">
-    <ellipse cx="143.568" cy="242.44" rx="13.6317" ry="13.6396" fill="#989f22" onClick={handleClick4}/>
+    <ellipse cx="143.568" cy="242.44" rx="13.6317" ry="13.6396" fill="#989f22" onClick={handleClick5}/>
     <path d="M155.107 242.44C155.107 248.818 149.94 253.986 143.568 253.986C137.197 253.986 132.03 248.818 132.03 242.44C132.03 236.062 137.197 230.894 143.568 230.894C149.94 230.894 155.107 236.062 155.107 242.44Z" stroke="url(#paint10_angular_928_532)" stroke-opacity="0.7" stroke-width="4.18625"/>
     </g>
     <path d="M143.5 258.398C152.271 258.398 159.381 251.284 159.381 242.509C159.381 233.734 152.271 226.619 143.5 226.619C134.729 226.619 127.619 233.734 127.619 242.509C127.619 251.284 134.729 258.398 143.5 258.398Z" stroke="url(#paint11_angular_928_532)" stroke-opacity="0.7" stroke-width="0.761137"/>
     <g filter="url(#filter5_bi_928_532)">
-    <ellipse cx="107.568" cy="311.44" rx="13.6317" ry="13.6396" fill="#989f22" onClick={handleClick5}/>
+    <ellipse cx="107.568" cy="311.44" rx="13.6317" ry="13.6396" fill="#989f22" onClick={handleClick4}/>
     <path d="M119.107 311.44C119.107 317.818 113.94 322.986 107.568 322.986C101.197 322.986 96.0297 317.818 96.0297 311.44C96.0297 305.062 101.197 299.894 107.568 299.894C113.94 299.894 119.107 305.062 119.107 311.44Z" stroke="url(#paint13_angular_928_532)" stroke-opacity="0.7" stroke-width="4.18625"/>
     </g>
     <path d="M107.5 327.398C116.271 327.398 123.381 320.284 123.381 311.509C123.381 302.734 116.271 295.619 107.5 295.619C98.7292 295.619 91.6194 302.734 91.6194 311.509C91.6194 320.284 98.7292 327.398 107.5 327.398Z" stroke="url(#paint14_angular_928_532)" stroke-opacity="0.7" stroke-width="0.761137"/>
@@ -1047,7 +1047,7 @@ return (
     <g filter="url(#filter0_i_934_1202)" >
     <path d="M90.9983 -1940C90.9983 -1920.23 629.32 -1713.52 250.999 -1787C-302.501 -1894.5 251.501 -1708 314 -1613C352.51 -1554.47 -70.8073 -1436.06 55.2371 -1418.5C187.995 -1400 621.29 -1584.23 98.9982 -1218C-26.501 -1130 11.0004 -1073 242 -1019.5C438.013 -974.103 417 -822.428 299.998 -776C-548 -439.5 944.499 -766.5 86.4978 -408.5C-83.3005 -337.652 578 -191 315.5 -200C125.02 -206.531 -229.5 -252.5 181 -9C464 117 -340.001 53.5 235 189C810.001 324.5 -358.002 355.5 241.499 512.5C841.001 669.5 -443.5 585 273 820.5" stroke="#0B3238" stroke-opacity="0.6" stroke-width="7.05436"/>
     </g>
-    <g filter="url(#filter1_bi_934_1202)" onClick={handleClick5} >
+    <g filter="url(#filter1_bi_934_1202)" onClick={handleClick4} >
     <circle cx="278.271" cy="326.145" r="12.4953" fill="#989f22"/>
     <circle cx="278.271" cy="326.145" r="10.4022" stroke="#989f22" stroke-opacity="0.7" stroke-width="4.18625"/>
     </g>
@@ -1067,7 +1067,7 @@ return (
     <circle cx="339.271" cy="217.145" r="10.4022" stroke="#989f22" stroke-opacity="0.7" stroke-width="4.18625"/>
     </g>
     <circle cx="339.208" cy="217.208" r="14.5885" stroke="url(#paint11_angular_934_1202)" stroke-opacity="0.7" stroke-width="0.761137"/>
-    <g filter="url(#filter5_bi_934_1202)"onClick={handleClick4} >
+    <g filter="url(#filter5_bi_934_1202)"onClick={handleClick5} >
     <circle cx="376.271" cy="285.145" r="12.4953" fill="#989f22"/>
     <circle cx="376.271" cy="285.145" r="10.4022" stroke="#989f22" stroke-opacity="0.7" stroke-width="4.18625"/>
     </g>
@@ -1270,12 +1270,12 @@ return (
 <circle cx="79.2707" cy="210.145" r="10.4022" stroke="url(#paint7_angular_934_947)" stroke-opacity="0.7" stroke-width="4.18625"/>
 </g>
 <circle cx="79.2079" cy="210.208" r="14.5885" stroke="url(#paint8_angular_934_947)" stroke-opacity="0.7" stroke-width="0.761137"/>
-<g filter="url(#filter4_bi_934_947)"  onClick={handleClick5}>
+<g filter="url(#filter4_bi_934_947)"  onClick={handleClick4}>
 <circle cx="169.271" cy="315.145" r="12.4953" fill="url(#paint9_linear_934_947)"/>
 <circle cx="169.271" cy="315.145" r="10.4022" stroke="url(#paint10_angular_934_947)" stroke-opacity="0.7" stroke-width="4.18625"/>
 </g>
 <circle cx="169.208" cy="315.208" r="14.5885" stroke="url(#paint11_angular_934_947)" stroke-opacity="0.7" stroke-width="0.761137"/>
-<g filter="url(#filter5_bi_934_947)"  onClick={handleClick4}>
+<g filter="url(#filter5_bi_934_947)"  onClick={handleClick5}>
 <circle cx="92.2707" cy="278.145" r="12.4953" fill="url(#paint12_linear_934_947)"/>
 <circle cx="92.2707" cy="278.145" r="10.4022" stroke="url(#paint13_angular_934_947)" stroke-opacity="0.7" stroke-width="4.18625"/>
 </g>
@@ -1541,7 +1541,7 @@ return (
       </div>
 
       <button 
-          className="absolute w-[60vw] sm:w-[35vw] bottom-[2vw] sm:top-[60vw] -left-[3vw] sm:left-[55vw] z-[50] focus:outline-none transform hover:scale-105 transition-transform duration-300"
+          className="absolute w-[60vw] sm:w-[30vw] bottom-[2vw] sm:bottom-[6vw] -left-[3vw] sm:left-[5vw] z-[50] focus:outline-none transform hover:scale-105 transition-transform duration-300"
         >
           <img src={road8} alt="Road" className="w-full filter brightness-100" />
         </button>
