@@ -4,9 +4,24 @@ import earth4 from '../assets/earth4.png';
 import road7 from '../assets/road7.svg'; 
 import road8 from '../assets/road8.svg';
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box } from '@chakra-ui/react';
-
+import { motion,  AnimatePresence } from 'framer-motion';
 
 function Golden({ position }) {
+
+  const containerVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+  
+  const titleVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.2 } },
+  };
+  
+  const contentVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut", delay: 0.4, staggerChildren: 0.1 } },
+  };
 
   // State for tracking active content
   const [activeContent, setActiveContent] = useState({
@@ -21,7 +36,7 @@ function Golden({ position }) {
   // Define content for each circle
   const circleContent = {
     circle1: {
-      boxTitle: "EXCEL BASICS",
+      boxTitle: " BASICS",
       difficulty: 'basics',
       links: [
         "https://www.wikipedia.org/",
@@ -30,10 +45,10 @@ function Golden({ position }) {
         "https://www.howstuffworks.com/",
         "https://www.sparknotes.com/"
       ],
-      description: "Learn Excel fundamentals and basic operations"
+      description: "Learn  fundamentals and basic operations"
     },
     circle2: {
-      boxTitle: "EXCEL INTERMEDIATE",
+      boxTitle: " INTERMEDIATE",
       difficulty: 'medium',
       links: [
         "https://www.github.com/",
@@ -42,10 +57,10 @@ function Golden({ position }) {
         "https://www.coursera.org/",
         "https://www.udemy.com/"
       ],
-      description: "Explore advanced Excel features and formulas"
+      description: "Explore advanced  features and formulas"
     },
     circle3: {
-      boxTitle: "EXCEL ADVANCED",
+      boxTitle: " ADVANCED",
       difficulty: 'hard',
       links: [
         "https://www.leetcode.com/",
@@ -54,10 +69,10 @@ function Golden({ position }) {
         "https://projecteuler.net/",
         "https://www.codeforces.com/"
       ],
-      description: "Master complex Excel functions and macros"
+      description: "Master complex  functions and macros"
     },
     circle4: {
-      boxTitle: "EXCEL QUIZ",
+      boxTitle: " QUIZ",
       difficulty: 'quiz',
       links: [
         "https://www.quizlet.com/",
@@ -66,10 +81,10 @@ function Golden({ position }) {
         "https://www.trivia.com/",
         "https://www.funtrivia.com/"
       ],
-      description: "Test your Excel knowledge"
+      description: "Test your  knowledge"
     },
     circle5: {
-      boxTitle: "EXCEL RESOURCES",
+      boxTitle: " RESOURCES",
       difficulty: 'resources',
       links: [
         "https://www.stackoverflow.com/",
@@ -78,7 +93,7 @@ function Golden({ position }) {
         "https://www.reddit.com/r/learnprogramming/",
         "https://developer.mozilla.org/"
       ],
-      description: "Additional Excel learning resources"
+      description: "Additional  learning resources"
     }
   };
 
@@ -1466,10 +1481,10 @@ return (
      </div>
 
       {/* Glowing Ball */}
-      <div className="absolute top-[30vw] sm:top-[14vw] left-[25vw] sm:left-[22vw] w-[4vw] h-[4vw] rounded-full bg-[#51bdd0]"
+      <div className="absolute top-[30vw] sm:top-[14vw] left-[25vw] sm:left-[22vw] w-[4vw] h-[4vw] rounded-full bg-[rgb(248,255,40)]"
              style={{
                filter: 'brightness(200%) blur(1vw)',
-               boxShadow: '0 0 10vw 6vw rgba(81, 189, 208, 1)'
+               boxShadow: '0 0 10vw 6vw rgba(248,255,40, 1)'
              }}></div>
 
               {/* Road Button */}
@@ -1487,26 +1502,39 @@ return (
 
         
 
-
-        <div className="absolute w-[45vw] sm:w-[40vw] h-[25vh] sm:h-[60vh] top-[6vw] sm:top-[2vw] left-[54vw] sm:left-[46vw] rounded-lg shadow-lg overflow-hidden"
+<AnimatePresence>
+<motion.div className="absolute w-[45vw] sm:w-[40vw] h-[25vh] sm:h-[60vh] top-[6vw] sm:top-[2vw] left-[54vw] sm:left-[46vw] rounded-lg shadow-lg overflow-hidden"
          style={{
           background: 'linear-gradient(200deg #C5D250 100%)',
           opacity: '0.8',
           backdropFilter: 'blur(15px)',
           backgroundColor: 'rgba(197, 210, 80, 0.3)',
           border: '1.5px solid rgba(197, 210, 80, 1)',
-        }}> 
-        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-2">{activeContent.boxTitle}</h1>
+        }}
+        key={activeContent.boxTitle}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        > 
+        <motion.h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-2"
+         variants={titleVariants}
+         >
+          {activeContent.boxTitle}</motion.h1>
 
-        <div className="sm:w-[36vw] h-[75%] m-[1vw] bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
+        <motion.div className="sm:w-[36vw] h-[75%] m-[1vw] bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
         style={{
           background: 'linear-gradient(180deg #DDF75F 50% , #60701D 50%)',
           backdropFilter: 'blur(15px)',
           backgroundColor: 'rgba(197, 210, 80, 0.5)',
-        }}>
-          <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">
+        }}
+        variants={contentVariants}>
+
+          <motion.h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]"
+            variants={contentVariants}
+          >
             {activeContent.contentDescription} 
-          </h2>
+          </motion.h2>
 
           <Accordion allowToggle>
             {Array.from({ length: 10 }).map((_, index) => (
@@ -1537,14 +1565,16 @@ return (
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
+</AnimatePresence>
+     
 
-      <button 
+      {/* <button 
           className="absolute w-[60vw] sm:w-[30vw] bottom-[2vw] sm:bottom-[6vw] -left-[3vw] sm:left-[5vw] z-[50] focus:outline-none transform hover:scale-105 transition-transform duration-300"
         >
           <img src={road8} alt="Road" className="w-full filter brightness-100" />
-        </button>
+        </button> */}
 
 
 

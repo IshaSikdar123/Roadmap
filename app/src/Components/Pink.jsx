@@ -2,10 +2,26 @@ import React , { useState } from 'react'
 import earth7 from '../assets/earth7.png';
 import road6 from '../assets/road6.svg';
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box } from '@chakra-ui/react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 
 function Pink({ position }) {
+
+  const containerVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+  
+  const titleVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.2 } },
+  };
+  
+  const contentVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut", delay: 0.4, staggerChildren: 0.1 } },
+  };
 
   // State for tracking active content
   const [activeContent, setActiveContent] = useState({
@@ -20,7 +36,7 @@ function Pink({ position }) {
   // Define content for each circle
   const circleContent = {
     circle1: {
-      boxTitle: "EXCEL BASICS",
+      boxTitle: " BASICS",
       difficulty: 'basics',
       links: [
         "https://www.wikipedia.org/",
@@ -29,10 +45,10 @@ function Pink({ position }) {
         "https://www.howstuffworks.com/",
         "https://www.sparknotes.com/"
       ],
-      description: "Learn Excel fundamentals and basic operations"
+      description: "Learn  fundamentals and basic operations"
     },
     circle2: {
-      boxTitle: "EXCEL INTERMEDIATE",
+      boxTitle: " INTERMEDIATE",
       difficulty: 'medium',
       links: [
         "https://www.github.com/",
@@ -41,10 +57,10 @@ function Pink({ position }) {
         "https://www.coursera.org/",
         "https://www.udemy.com/"
       ],
-      description: "Explore advanced Excel features and formulas"
+      description: "Explore advanced  features and formulas"
     },
     circle3: {
-      boxTitle: "EXCEL ADVANCED",
+      boxTitle: " ADVANCED",
       difficulty: 'hard',
       links: [
         "https://www.leetcode.com/",
@@ -53,10 +69,10 @@ function Pink({ position }) {
         "https://projecteuler.net/",
         "https://www.codeforces.com/"
       ],
-      description: "Master complex Excel functions and macros"
+      description: "Master complex  functions and macros"
     },
     circle4: {
-      boxTitle: "EXCEL QUIZ",
+      boxTitle: " QUIZ",
       difficulty: 'quiz',
       links: [
         "https://www.quizlet.com/",
@@ -65,10 +81,10 @@ function Pink({ position }) {
         "https://www.trivia.com/",
         "https://www.funtrivia.com/"
       ],
-      description: "Test your Excel knowledge"
+      description: "Test your  knowledge"
     },
     circle5: {
-      boxTitle: "EXCEL RESOURCES",
+      boxTitle: " RESOURCES",
       difficulty: 'resources',
       links: [
         "https://www.stackoverflow.com/",
@@ -77,7 +93,7 @@ function Pink({ position }) {
         "https://www.reddit.com/r/learnprogramming/",
         "https://developer.mozilla.org/"
       ],
-      description: "Additional Excel learning resources"
+      description: "Additional  learning resources"
     }
   };
 
@@ -1485,26 +1501,39 @@ return (
 </div>
         
 
-
-        <div className="absolute w-[45vw] sm:w-[40vw] h-[25vh] sm:h-[60vh] top-[6vw] sm:top-[5vw] left-[4vw] sm:left-[5vw] rounded-lg shadow-lg overflow-hidden"
+<AnimatePresence>
+<motion.div className="absolute w-[45vw] sm:w-[40vw] h-[25vh] sm:h-[60vh] top-[6vw] sm:top-[5vw] left-[4vw] sm:left-[5vw] rounded-lg shadow-lg overflow-hidden"
         style={{
           background: 'linear-gradient(200deg #FF0083 100%)',
           opacity: '0.8',
           backdropFilter: 'blur(15px)',
           backgroundColor: 'rgba(149 , 98 , 124, 0.3)',
           border: '1.5px solid rgba(255 , 0, 131, 1)',
-        }}>
-        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-2">{activeContent.boxTitle}</h1>
+        }}  
+        key={activeContent.boxTitle}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="hidden">
 
-        <div className="sm:w-[36vw] h-[75%] m-[1vw] bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
+        <motion.h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-2"
+         variants={titleVariants}
+         >
+        {activeContent.boxTitle}</motion.h1>
+
+        <motion.div className="sm:w-[36vw] h-[75%] m-[1vw] bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
         style={{
           background: 'linear-gradient(180deg #E992BF 50% , #BB2974 50%)',
           backdropFilter: 'blur(15px)',
           backgroundColor: 'rgba(187 , 41, 116, 1)',
-        }}> 
-          <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">
-            {activeContent.contentDescription}
-          </h2> 
+        }}
+        variants={contentVariants}> 
+
+          <motion.h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]"
+          variants={contentVariants}
+          >
+          {activeContent.contentDescription}
+          </motion.h2> 
 
           <Accordion allowToggle>
             {Array.from({ length: 10 }).map((_, index) => (
@@ -1535,8 +1564,10 @@ return (
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
+</AnimatePresence>
+      
 
 
     </div>

@@ -2,9 +2,25 @@ import React, { useState } from 'react';
 import earth6 from '../assets/earth6.png'; 
 import road5 from '../assets/road5.svg'; 
 import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box } from '@chakra-ui/react';
+import { motion,  AnimatePresence } from 'framer-motion';
 
 
 function White({ position }) {
+
+  const containerVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+  
+  const titleVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.2 } },
+  };
+  
+  const contentVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut", delay: 0.4, staggerChildren: 0.1 } },
+  };
 
 
   // State for tracking active content
@@ -1486,25 +1502,36 @@ return (
         </div>
 
         
-
-
-        <div className="absolute w-[45vw] sm:w-[40vw] h-[25vh] sm:h-[60vh] top-[6vw] sm:top-[2vw] left-[54vw] sm:left-[46vw] rounded-lg shadow-lg overflow-hidden"
+<AnimatePresence>
+<motion.div className="absolute w-[45vw] sm:w-[40vw] h-[25vh] sm:h-[60vh] top-[6vw] sm:top-[2vw] left-[54vw] sm:left-[46vw] rounded-lg shadow-lg overflow-hidden"
         style={{
           background: 'linear-gradient(200deg #00313B 100%)',
           opacity: '0.8',
           backdropFilter: 'blur(15px)',
           backgroundColor: 'rgba(0 , 49, 59, 0.7)',
           border: '1.5px solid rgba(0 , 212, 255, 1)',
-        }}>
-        <h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-2">{activeContent.boxTitle}</h1>
+        }}
+        key={activeContent.boxTitle}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="hidden">
 
-        <div className="sm:w-[36vw] h-[75%] m-[1vw] bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
+        <motion.h1 className="text-white text-[5vw] sm:text-[3vw] font-semibold m-1 sm:m-1 ml-1 sm:ml-2"
+        variants={titleVariants}
+        >
+        {activeContent.boxTitle}</motion.h1>
+
+        <motion.div className="sm:w-[36vw] h-[75%] m-[1vw] bg-opacity-20 rounded-md p-[1vw] overflow-y-auto"
         style={{
           background: 'linear-gradient(180deg #6AC8DB 50% , #BEF4FF 50%)',
           backdropFilter: 'blur(15px)',
           backgroundColor: 'rgba(106, 200, 219, 0.8)',
-        }}>
-          <h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]">{activeContent.contentDescription}</h2>
+        }}
+        variants={contentVariants}
+        >
+          <motion.h2 className="text-white font-medium text-[3vw] sm:text-[1.5vw] mb-[1vw]"
+           variants={contentVariants}>{activeContent.contentDescription}</motion.h2>
 
           <Accordion allowToggle>
             {Array.from({ length: 10 }).map((_, index) => (
@@ -1535,8 +1562,11 @@ return (
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
+</AnimatePresence>
+
+     
 
 
     </div>
